@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{Destinés à la TLe\\Au Lycée de Dindéferlo}
+\title{\textbf{Suite Numérique }}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{I. Généralités}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Définition}}}}
+Une suite est une fonction $u\ :\ \mathbb{N}\longrightarrow\mathbb{R}$ définie sur l'ensemble $\mathbb{N}$ des entiers naturels.
+	
+L'image par la suite $u$ de l'entier $n$ est notée $u_{n}$ au lieu de $u(n)$
+	
+La suite elle-même est notée $\left(u_{n}\right)$
+\subsection*{\underline{\textbf{\textcolor{red}{2. Modes de définition d'une suite }}}}
+$\bullet\ $On peut définir une suite par une formule de la forme : $u_{n}=f(n)$ (définition explique).
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple :}}}}
+Soit la suite $\left(u_{n}\right)$ définie par : $u_{n}=n^{2}-5n+3.$
+
+Alors :
+ 
+$u_{0}=0^{2}-(5\times 0)+3=3$ ;
+	
+$u_{1}=1^{2}-(5\times 1)+3=-1$ ;
+	
+$u_{2}=2^{2}-(5\times 2)+3=-3$ ;
+	
+$u_{10}=10^{2}-(5\times 10)+3=53$ ;
+	
+$u_{50}=50^{2}-(5\times 50)+3=2253$
+	
+$\bullet\ $On peut aussi définir une suite par une condition de la forme : $u_{n+1}=f\left(u_{n}\right)$ et la donnée du premier terme $u_{0}$ (relation de récurrence).
+	
+$\bullet\ $On peut alors calculer de proche en proche les termes de la suite : $u_{1}=f\left(u_{0}\right)\ ;\ u_{2}=f\left(u_{1}\right)\ ;\ u_{3}=f\left(u_{2}\right)\ ;\ \text{ etc}\ldots$
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple :}}}}
+	
+Soit la suite $\left(u_{n}\right)$ définie par :
+	
+$u_{n+1}=2u_{n}+3\text{ et }u_{0}=-1.$
+	
+Alors : $u_{1}=u_{0+1}=2u_{0}+3=1$ ;
+	
+$u_{2}=u_{1+1}=2u_{1}+3=-3$ ;
+	
+$u_{3}=u_{2+1}=2u_{2}+3=13\ ;\ \text{ etc}\ldots$
+	
+Par exemple, pour calculer $u_{50}$, il faudrait faire $50$ calculs successifs.
+\subsection*{\underline{\textbf{\textcolor{red}{3. Sens de variation d'une suite}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Définition :}}}}
+	
+Une suite $\left(u_{n}\right)$ est dite :
+	
+$-\ $Croissante si : $\forall\;n\;,\ :\ u_{n+1}\geq u_{n}.$
+	
+$-\ $Décroissante si : $\forall\;n;,\ :\ u_{n+1}\leq u_{n}$
+
+$-\ $Monotone si elle est croissante ou décroissante.
+
+$-\ $Constante si : $\forall\;n\;,\ :\ u_{n+1}=u_{n}.$
+
+Étudier le sens de variation d'une suite $\left(u_{n}\right)$
+
+C'est dire si elle est croissante ou décroissante ou constante.
+\subsection*{\underline{\textbf{\textcolor{red}{Règle :}}}}
+Pour étudier le sens de variation d'une suite $\left(u_{n}\right)$,on compare deux termes consécutifs, pour cela, on peut étudier le signe de leur différence, ou, s'il s'agit de nombres strictement positifs, comparer leur quotient à $1.$
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple :}}}}
+Soit la suite $\left(u_{n}\right)$ définie par : $u_{n}=\dfrac{n+2}{2n+1}$
+
+Alors :
+
+$u_{n+1}=\dfrac{(n+1)+2}{2(n+1)+1}=\dfrac{n+3}{2n+3}$
+	
+$u_{n+1}-u_{n}=\dfrac{n+3}{2n+3}-\dfrac{n+2}{2n+1}=\dfrac{-3}{(2n+1)(2n+3})$
+	
+Pour tout entier naturel $n$, on a donc : $u_{n+1}-u_{n}\leq 0.$
+	
+La suite étudiée est par conséquent décroissante.
+\section*{\underline{\textbf{\textcolor{red}{II. Suite arithmétiques}}}}
+Une suite $\left(u_{n}\right)$ est arithmétique si chaque terme s'obtient en ajoutant au précédent un même nombre $r$ appelé raison : $u_{n+1}=u_{n}+r.$
+	 
+\subsection*{\underline{\textbf{\textcolor{red}{1.Expression du terme général}}}}		
+$\bullet\ \text{Si }\left(u_{n}\right)$ est une suite arithmétique de premier terme $u_{0}$ et de raison $r$, alors :
+	
+$$u_{n}=u_{0}+nr$$
+	
+$\bullet\ $Si le premier terme est $u_{1}$, alors :
+$$u_{n}=u_{1}+(n-1)r$$
+\subsection*{\underline{\textbf{\textcolor{red}{2.Somme des premiers termes}}}}	
+$\bullet\ $Si la suite a pour premier terme $u_{0}$, alors la somme $S_{n}=u_{0}+u_{1}+\ldots+u_{n}$ vaut :
+	
+$$S_{n}=\dfrac{(n+1)\left(u_{0}+u_{n}\right)}{2}$$
+
+$\bullet\ $Si la suite a pour premier terme $u_{1}$, alors la somme $S_{n}=u_{1}+u_{1}+\ldots+u_{n}$ vaut :
+
+$$S_{n}=\dfrac{n(u_{1}+u_{n})}{2}$$
+
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple :}}}}
+Soit $\left(u_{n}\right)$ la suite définie par : $u_{n}=2n-1$ et $u_{1}=1.$
+
+Alors : $\left(u_{n}\right)$ est une suite arithmétique
+
+Car : $u_{n+1}-u_{n}=2(n+1)-1-(2n-1)=2n+2-1-2n+1=2.$
+
+Donc : $u_{n+1}=u_{n}+2.$ 
+
+La raison de la suite est $2.$
+
+La somme des $n$ premiers termes vaut : $u_{1}+u_{2}\ldots+u_{n}=\dfrac{n(1+2n-1}{2}=n^{2}$
+\section*{\underline{\textbf{\textcolor{red}{III. Suites géométriques}}}}
+Une suite $\left(u_{n}\right)$ est dite géométrie si chaque terme s'obtient en multipliant le précédent par un même nombre $q$ appelé raison : $u_{n+1}=u_{n}\times q.$
+\subsection*{\underline{\textbf{\textcolor{red}{1. Expression du terme général}}}}
+$\bullet\ $Si la suite géométrique $\left(u_{n}\right)$ a pour premier terme $u_{0}$ et pour raison $q$, alors : $$u_{n}=u_{0}\times q^{n}$$
+
+$\bullet\ $Si le premier terme est $u_{1}$, alors :$$u_{n}=u_{1}\times q^{n-1}$$
+\subsection*{\underline{\textbf{\textcolor{red}{2. Somme des premiers termes }}}}
+
+Pour toute suite géométrique, de raison $q\neq 1$, on a:
+
+$$u_{0}+u_{1}+\ldots+u_{n}=u_{0}\times\dfrac{1-q^{n+1}}{1-q}$$
+
+$$u_{1}+u_{2}+\ldots+u_{n}=u_{1}\times\dfrac{1-q^{n}}{1-q}$$
+
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple :}}}}
+$1+\dfrac{1}{2}+\dfrac{1}{2^{2}}+\ldots\ldots+\dfrac{1}{2^{n}}=S_{n}$ est la somme des premiers termes d'une suite géométrique de raison $\dfrac{1}{2}.$ 
+
+Donc : $1+\dfrac{1}{2}+\dfrac{1}{2^{2}}+\ldots\ldots+\dfrac{1}{2^{n}}=\dfrac{1-\left(\dfrac{1}{2}\right)^{n+1}}{1-\dfrac{1}{2}}=2-\dfrac{1}{2^{n}}$
+\section*{\underline{\textbf{\textcolor{red}{IV. limites d'une suite}}}}
+La notion de limite en $+\infty$, déjà rencontrée à propos des fonction, s'étend au cas des suites.
+	
+On a les résultats suivantes :
+\subsection*{\underline{\textbf{\textcolor{red}{Théorème 1 :}}}}
+a. $\lim\limits_{n\;\longrightarrow\;+\infty}\sqrt{n}=+\infty\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}n^{2}=+\infty\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}n^{3}=+\infty.$
+
+b. $\lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{\sqrt{n}}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n^{2}}=0\ ;\ \lim\limits_{n\;\longrightarrow\;+\infty}\dfrac{1}{n^{3}}=0.$
+\subsection*{\underline{\textbf{\textcolor{red}{Théorème 2 :}}}}
+Soit $q$ un nombre réel.
+Soit \( q \) un nombre réel.
+
+\begin{itemize}
+    \item Si \( q > 1 \), alors
+    \[
+    \lim_{n \rightarrow +\infty} q^n = +\infty.
+    \]
+    
+    \item Si \( -1 < q < 1 \), alors
+    \[
+    \lim_{n \rightarrow +\infty} q^n = 0.
+    \]
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Théorème 3 :}}}}
+Les résultats concernant les opérations sur les limites de fonctions s'étendent aux limites de suites.
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple :}}}}
+
+1) Soit la suite \( (u_{n}) \) définie par : \( u_{n} = \dfrac{3n^{3} - 5n^{2} + 1}{2n^{3} + 1} \)
+
+Alors \( \lim_{n \rightarrow +\infty} u_{n} = \lim_{n \rightarrow +\infty} \dfrac{3n^{3}}{2n^{3}} = \dfrac{3}{2} \).
+
+2) Soit la suite \( (v_{n}) \) définie par : \( v_{n} = 1 + \dfrac{1}{3} + \left(\dfrac{1}{3}\right)^{2} + \ldots + \left(\dfrac{1}{3}\right)^{n+1} \).
+
+On a d'après le paragraphe III :
+
+\[
+v_{n} = \dfrac{1 - \left(\dfrac{1}{3}\right)^{''}}{1 - \dfrac{1}{3}}
+\]
+
+car \( v_{n} \) est la somme des termes consécutifs d'une suite géométrique de raison \( \dfrac{1}{3} \), or comme \( -1 < \dfrac{1}{3} < 1 \), \( \lim_{n \rightarrow +\infty} \left(\dfrac{1}{3}\right)^{''} = 0 \).
+
+D'où : \( \lim_{n \rightarrow +\infty} \dfrac{1}{1 - \dfrac{1}{3}} = \dfrac{3}{2} \).
+\end{document}
