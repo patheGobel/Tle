@@ -1,0 +1,211 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{Destinés à la 1\textsuperscript{ère}S2\\Au Lycée de Dindéferlo}
+\title{\textbf{TD Dénombrement}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{Exercice 1}}}}
+Deux ensembles $A$ et $B$ sont tels que : $\text{Card}(A)=24$ ; 
+$\text{Card}(A\cup B)=46$ et $\text{Card}(A\cap B)=8$
+
+Calculer le $\text{Card}(B)$ ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 2}}}}
+Une station de radio diffuse les mêmes publicités à $15$ heures et à $16$ heures.
+
+D'après un sondage on sait qu'il y a $21400$ auditeurs ò $15$ heures et $24800$ à $16$ heures.
+
+Combien de personnes ont entendu ces publicités :
+
+1. si l'on suppose que les personnes qui ont écouté la radio à $15$ heures ne l'écoutent plus à $16$ heures ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 3}}}}
+Dénombrer les façons de composer un code de $4$ symboles sachant que les premier et troisième symboles sont des lettres et que les deuxième et quatrième symboles sont des chiffres.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 4}}}}
+Lors d'une course olympique, $12$ coureurs s'affrontent pour trois médailles (Or, Argent et Bronze).
+ 
+Combien y a-t-il de palmarès possibles ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 5}}}}
+On considère deux parties $A$ et $B$ d'un ensemble fini $E.$ Compléter les tableaux suivants :
+$$\begin{array}{|l|c|c|c|c|c|c|c|c|c|} \hline \text{Ensemble}&E&amp;A&B&A\cap B&A\cup B&\overline{A}&\overline{B}&\overline{A\cap B}&\overline{A\cup B}\\ \hline \text{Card}&18&8&6&2&&&&&\\ \hline \text{Card}&100&75&&&&&50&75&\\ \hline \text{Card}&53&&34&&&23&&&8\\ \hline \end{array}$$
+\section*{\underline{\textbf{\textcolor{red}{Exercice 6}}}}
+Parmi $40$ secrétaires : 
+
+$8$ parlent russe, 15 anglais et 8 espagnol
+ 
+$4$ parlent anglais et espagnol
+ 
+$5$ parlent anglais et russe
+ 
+$2$ parlent espagnol et russe
+ 
+$2$ parlent les trois langues.
+ 
+a. combien de secrétaires parlent au moins une des trois langues ?
+ 
+b. Combien de secrétaires ne connaissent aucune des trois langues ?
+
+N.B : 
+
+Faire un diagramme.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 7}}}}
+Lors d'un examen, un candidat doit deux sujets : un en mathématiques (sur trois proposés) et un en français (sur quatre proposés).
+ 
+Combien a-t-il de façons de choisir les deux sujets qu'il va traiter ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 8}}}}
+Soit $E$ un ensemble de $8$ éléments.
+
+Combien existe-t-il :
+
+a. d'arrangement de trois éléments de $E$ ?
+
+b. d'arrangements de neuf élément de $E$ ?
+
+c. de permutations de $E$ ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 9}}}}
+Combien existe-t-il d'anagrammes du mot THIES ? du mot AFRIQUE ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 10}}}}
+Combien existe-t-il de numéros de téléphones à six chiffres $6$ deux à deux
+\section*{\underline{\textbf{\textcolor{red}{Exercice 11}}}}
+Une classe de $20$ élèves veut élire un comité pour organiser  une excursion, comprenant un président, un vice-président, un trésorier et secrétaire.
+
+Combien existe-t-il de comités possibles ?
+
+	(on suppose que chaque élève est candidat à chaque poste, mais qu'il n'est pas permis de cumuler)
+\section*{\underline{\textbf{\textcolor{red}{Exercice 12}}}}
+Une urne contient $12$ boules.
+
+Combien existe-t-il de façons de sortir $3$ boules, sachant qu'on extrait les boules une à une sans remise dans l'urne ?
+
+Reprendre la question avec remise dans l'urne.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 13}}}}
+ON dispose de $12$ cartons sur lesquels sont disposées les lettres $A$, $B$, $C$, $D$, $E$, $F$, $G$, $H$, $I$, $J$, $K$, $L.$ 
+
+Combien y a-t-il de permutations où :
+
+a. l'objet $A$ occupe la première place ?
+
+b. Les objets $A$ et $B$ occupent les deux premières places ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 14}}}}
+On dispose de $6$ plaquettes sur lesquelles on inscrit les chiffres $2$, $4$, $5$, $6$, $8$ et $9.$
+
+Combien de nombres distincts peut-on former en alignant ces $6$ plaquettes ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 15}}}}
+Astou a $4$ crayons de couleurs (bleu, jaune, rouge et vert) et veut dessiner un drapeau à $3$ bandes verticales.
+
+
+Combien a-t-elle de possibilités pour dessiner un drapeau tricolore?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 16}}}}
+Combien y a-t-il de façons d'organiser le passage de $6$ artistes pour un spectacle ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 17}}}}
+Soit les $5$ lettres $A$, $B$, $C$, $D$ et $E.$
+
+a. Combien peut-on former de mots de $5$ lettres distinctes avec ces $5$ lettres ?
+
+\textbf{Ivoire Svt} 
+
+\textbf{Goualard} 
+
+\textbf{Quelle} 
+
+\textbf{Une} 
+
+\textbf{Qui Est Matrix} 
+
+b. Combien peut-on former de mot de $5$lettres distinctes tels que $A$ et $E$ ne soient pas voisines 
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 18}}}}
+On appelle « mot » toute permutation de lettres données.
+
+Avec les lettres du mot BUNGALOW, combien peut-on former de mots :
+
+a. de $8$ lettres ?
+
+b. de $8$ lettres et commençant par deux consonnes ?
+
+c. de $8$ lettres et commençant par deux voyelles ?
+
+d. d $8$ lettres, commençant et finissant par une voyelle ?
+
+
+e. de $8$ lettres, commençant par une consonne et finissant par une voyelle ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 19}}}}
+Cinq personnes $A$, $B$, $C$, $D$, $E$ et $F$ vont à un spectacle.
+
+De combien de façons peut-on les faire asseoir sur six sièges cote à cote si :
+
+a. $D$ insiste pour s'asseoir à coté de $A$ ?
+
+b. $F$ refuse de s'asseoir  à cote de $B$ ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 20}}}}
+Combien de nombre de $4$ chiffres peut d'on former avec les chiffres $1$, $2$, $3$, $4$ et $5$ sachant que :
+
+a. aucun chiffre ne doit être répété ?
+
+b. les répétitions sont autorisées ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 21}}}}
+Combien de nombres inférieur à $2000$ peut-on fabriquer avec les chiffres $1$, $2$, $4$ et $7$ sachant que
+
+a. aucun chiffre ne doit être répété ?
+
+b. les répétitions sont autorisées.
+
+Combien de ces nombres sont pairs ? Impairs ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 22}}}}
+Une urne contient $5$ boules blanches numérotées $B_{1}$,$\ldots$ $B_{5}$ et $4$ boules noires numérotées $N_{1}$,$\ldots$ $N_{4}.$
+
+On tire successivement $4$ boules en remettant dans l'urne la boule tirée après chaque tirage.
+
+Combien y'a-t-il de tirages distincts possibles ? 
+
+Combien y’a-t-il e tirages unicolores ?
+
+Combien y’a-t-il de tirages comportant autant de boules noires que de boules blanches ?
+
+Combien y’a-t-il de tirages comportant plus de boules noires que de boules blanches ?
+
+Reprendre les $4$ questions précédentes en supposant que le tirage se fait avec remise.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 23}}}}
+On jette $3$ dés $A$, $B$, $C$ ayant chacun $6$ faces.
+	
+Combien y’a-t-il de résultats :
+	
+a. en tout ?
+	
+b. ou les $3$ faces sont identiques ?
+	
+c. ou les $3$ faces sont différents deux à deux
+	
+d. ne comportant aucun chiffre $1$ ?
+	
+e. comportant au moins un chiffre $1$ ?
+	
+f. comportant exactement un chiffre $1$ ?
+	
+g. comportant exactement deux chiffres $1$ ?
+\end{document}
