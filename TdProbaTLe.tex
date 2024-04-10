@@ -1,0 +1,685 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{Destinés à la TLe\\Au Lycée de Dindéferlo}
+\title{\textbf{Exercice probabilité }}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{Exercice 1}}}}
+Dans une classe de Terminale $2$, $80\%$ des élèves ont déclaré aimer l'étude des $SVT$, $20\%$ celle des maths ,$15\%$ celle des $SVT$ et des maths.
+
+Quelle est la probabilité de tirer au hasard un élève de cette classe qui :
+
+1. aime les $SVT$ mais pas les maths ;
+
+2. aime les maths mais pas les $SVT$ ;
+
+3. n'aime ni les $SVT$ ni les maths.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 2}}}}
+On veut choisir un jury de $5$ membres parmi $15$ professeurs :
+
+$7$ de français, $2$ de philosophie, et $6$ d'anglais.
+
+Les chances d'être choisies sont égales.
+
+Quelle est la probabilité d'avoir un jury avec :
+
+A : « $2$ professeurs d'anglais et $3$ de français »
+
+B : « Des professeurs d'une même discipline »
+
+C : « Autant de professeurs d'anglais que de philosophie »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 3}}}}
+Une urne contient $5$ boules blanches, $3$ boules noires et $2$ boules rouges, indiscernables au toucher.
+
+$1^{ère}$ épreuve : On tire simultanément $3$ boules de l'urne.
+
+
+Calculer la probabilité de chacun des évènements suivants :
+
+A : « obtenir un tirage unicolore »
+
+B : « obtenir exactement $2$ boules blanches » ;
+
+C : « ne pas obtenir de boule noire ».
+
+$2^{ème}$ épreuve : On tire successivement sans remise $3$ boules de l'urne.
+
+D : « obtenir $2$ boules blanches suivies d'une rouge » ;
+
+E : « obtenir $2$ boules blanches et une boule rouge »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 4}}}}
+Une urne contient dix boules numérotées de $0$ à $9.$
+
+On tire successivement avec remise $4$ boules de l'urne.
+
+	
+Déterminer la probabilité de chacun des événements suivants : où le nombre formé
+
+1. commence par zéro.
+
+2. se termine par zéro.
+	
+3. commence par zéro et se termine par zéro.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 5}}}}
+<div>
+	Dans le tiroir de son armoire, Abdou possède $5$ paires de chaussures noires, $3$ paires de chaussures vertes et
+
+$2$ paires de chaussures rouges. 
+
+Ces chaussures sont mélangées dans le plus grand désordre et indiscernables au toucher.
+
+Au moment où il s'habille, survient une panne d'électricité.
+
+Abdou, qui est pressé et n'a ni lampe de poche, ni boite d'allumettes, prend au hasard deux chaussures dans le tiroir.
+
+1. Quelle est la probabilité pour qu'il ait tiré deux chaussures de même couleur ?
+
+2. Quelle est la probabilité pour qu'il ait tiré deux chaussures de couleurs différentes ?
+
+3. Quelle est la probabilité pour qu'il ait tiré deux chaussures qu'il ne peut pas porter ?
+
+4. Quelle est la probabilité pour qu'il ait tiré deux chaussures qu'il peut porter ? Commentaire : pour cette question, au besoin, se rapprocher d'un spécialiste.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 6}}}}
+
+Un aquarium contient $5$ poissons rouges, $3$ bleus et $2$ poissons verts indiscernables au touché.
+
+1. On tire simultanément $3$ poissons de l'aquarium.
+
+
+Calculer la probabilité des évènements suivants :
+
+A : « Obtenir un tirage unicolore » 
+
+B : « Obtenir exactement 2 poissons rouges »
+
+C : « Ne pas obtenir de poisson vert » 
+
+D « Obtenir au plus 2 poissons rouges »
+
+E : « Ne pas obtenir de vert et exactement un bleu »
+
+2. On tire successivement sans remise 3 poissons de l'aquarium.
+
+Calculer la probabilité des évènements suivants :
+
+F : « Obtenir $2$ poissons rouges et un poisson vert » 
+
+G : « Obtenir au moins un poisson rouge »
+
+H : « Obtenir un tirage tricolore »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 7}}}}
+On tire successivement sans remise trois poissons d'un aquarium qui contient sept poissons bleu dont une femelle, cinq de couleur jaune dont trois femelles.
+
+Les poissons sont indiscernables au touché.
+
+1. Déterminer le nombre de tirages possibles.
+
+2. Calculer la probabilité des événements suivants :
+
+A : « avoir des poissons de même sexe » 
+
+B : « avoir $2$ poissons jaunes et $2$ males exactement »
+
+C : « avoir $3$ poissons de même couleurs
+
+D « avoir des poissons de même couleur et de même sexes »
+
+E : « Ne pas obtenir de femelle et obtenir exactement un jaune »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 8}}}}
+On considère les $50$ nombres de $1$ à $50.$
+
+On tire simultanément trois de ces nombres au hasard.
+
+1. Combien y a-t-il de tirages possibles ?
+
+2. Calculer la probabilité de chacun des événements : Parmi les trois nombres tirés.
+
+a. il n'y a aucun multiple de $5$
+
+b. il n'y a au moins un multiple de $5$
+\section*{\underline{\textbf{\textcolor{red}{Exercice 9}}}}
+Un marchand de timbres constitue des pochettes de quatre timbres qu'il tire au hasard d'un paquet contenant $10$ timbres sénégalais, $20$ timbres mauritaniens et $15$ timbres gambiens .
+
+De combien de façons peut-il constituer des pochettes :
+
+1. qui contiennent quatre timbres d'un même pays ?
+
+2. qui contiennent des timbres des trois pays ?
+
+3. qui contiennent des timbres de deux pays seulement ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 10}}}}
+On veut choisir un jury de $5$ membres parmi $15$ professeurs : $7$ de français, $2$ de philosophie, et $6$ d'anglais.
+
+Les chances d'être choisies sont égales.
+
+Quelle est la probabilité d'avoir un jury avec :
+	
+1. $2$ professeurs d'anglais et $3$ de français.
+
+2. Des professeurs d'une même discipline.
+
+3. Autant de professeurs d'anglais que de français.
+
+4. Au moins un professeur de chaque discipline.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 11}}}}
+Une urne contient six boules blanches et quatre boules noires .
+
+	On appelle « tirage » la prise simultanée de deux boules dans cette urne, et l'on admet que tous les tirages sont équiprobables .
+
+1. On procède à un tirage unique .
+
+Calculer la probabilité de chacun des événements suivants :
+
+A : « on obtient deux boules blanches »
+
+B : « on obtient deux boules noires »
+
+C : « on obtient deux boules de couleurs différentes »
+
+Quelle est la somme de ces trois probabilités ?
+
+	2. On procède à deux tirages successifs en remettant dans l'urne, après le premier tirage, les deux boules tirées .
+
+On appelle « succès » la sortie de deux boules blanches lors d'un même tirage .
+
+Calculer :
+
+	a. la probabilité d'obtenir deux succès ;
+
+b. la probabilité d'obtenir un seul succès ;
+
+c. la probabilité de n'obtenir aucun succès ; 
+
+Quelle est la somme de ces trois probabilités ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 12}}}}
+Une urne contient 7 jetons portant les lettres $S$ ; $N$ ; $G$ ; $H$ ; $O$ ; $E$ et $R.$
+	
+On suppose qu'un mot est un assemblage de lettres distinctes ou non, ayant un sens ou non.
+
+1. On tire successivement $5$ jetons de l'urne, en remettant après chaque tirage le jeton tiré dans l'urne.
+
+On note dans l'ordre les jetons tirés pour former un mot de $5$ lettres.
+
+Déterminer la probabilité de former :
+
+a. un mot commençant par une voyelle.
+
+b. un mot commençant par $S$, se terminant par $R$ et contenant exactement une voyelle.
+
+2. On tire successivement $7$ jetons de l'urne, sans remettre le jeton tiré dans l'urne et on les aligne dans l'ordre du tirage pour former un mot de $7$ lettres.
+
+Déterminer la probabilité de former :
+
+a. un mot commençant par une voyelle et se terminant par une voyelle.
+
+b. le mot SENGHOR
+\section*{\underline{\textbf{\textcolor{red}{Exercice 13}}}}
+Une urne contient $2$ boules rouges portant le chiffre $0$ ; $3$ boules noires portant le chiffre $1$ et $6$ boules vertes portant le chiffre $2.$
+
+On extrait successivement $3$ boules de l'urne en remettant la boule tirée dans l'urne après chaque tirage.
+
+1. Définir l'univers $\Omega$ associé à cette épreuve.
+
+Déterminer son cardinal.
+
+2. Quelle est la probabilité des événements suivants :
+
+A : « obtenir exactement une boule portant le chiffre $0$ »
+
+B : « obtenir exactement $2$ boules portant le chiffre $1$ »
+
+C : « obtenir $3$ boules portant le même chiffre »
+
+D : « obtenir exactement $2$ noires »
+
+3. Reprendre les mêmes questions dans le cadre d'un tirage simultané de $3$ boules.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 14}}}}
+Un test de sélection comprend $10$ questions indépendantes.
+
+Chaque question est accompagnée de $3$ ré-ponses : la bonne et $2$mauvaises. 
+
+Un candidat répond au hasard à chacune de ces questions.
+
+1. Pour chaque question, quelle est la probabilité de donner la réponse exacte ?
+	
+2. Quelle est la probabilité pour que le candidat donne les réponses exactes ?
+
+3. Quelles est la probabilité pour que le candidat donne uniquement :
+
+a. des réponses fausses ? b. des réponses exactes ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 15}}}}
+Le programme d'histogéo d'un candidat au baccalauréat se compose de $15$ chapitres d'histoire et $12$ chapitres de géographie.
+
+Le candidat n'a que $11$ chapitres d'histoire et $10$ chapitres de géographie.
+	
+Il a fait l'impasse sur les $6$ autres dont il ne sait rien.
+
+Le sujet comporte $2$ question d'histoire et $2$ question de géographie portant sur des chapitres distincts.
+
+Le candidat ne doit traiter qu'une seule question (au choix) dans chacun des deux disciplines. 
+
+Déterminer la probabilité de chacun des événements suivants :
+
+1. A : « le candidat ne sait traiter aucune des $4$ questions ».
+
+2. B : « le candidat sait traiter les $4$ questions »
+
+3. C : « le candidat sait traiter au moins un des $4$ questions »
+
+4. D : « le candidat sait traiter au moins une question d'histoire et au moins une question de géographie »
+
+NB : « le candidat sait traiter toute question se rapportant à un chapitre qu'il a étudié »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 16}}}}
+Les lettres du mot « ORGANISME » sont inscrites sur neuf plaques.
+
+On tire au hasard successivement et sans remise $3$ plaques que l'on dispose devant soit de gauche à droite dans l'ordre du tirage.
+
+On obtient ainsi un « mot » de $3$ lettres ayant un sens au nom.
+
+1. Combien de « mot » différent peut-on formé ?
+
+2. Quelle est la probabilité :
+
+a. Pour que le « mot » soit écrit avec trois consones ?.
+
+b. Pour que le « mot » soit écrit avec trois voyelles ?
+
+c. Pour que le « mot » comporte au moins une voyelle ?
+
+d. De lire le « mot » mer ?
+
+e. D'obtenir les lettres du mot mer ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 17}}}}
+Une urne contient dix jetons : $4$ jetons verts portant chacun le $N°2, 3$ jetons blancs portant chacun le $N°0$, $1$ jeton bleu portant le numéro $0.$
+
+1. On extrait un jeton de l'urne. 
+
+Déterminer les probabilités des événements suivants :
+
+a. « e jeton est vert »
+
+b. « le jeton porte le numéro $0$ »
+
+2. On extrait simultanément $3$ jeton de l'urne.
+
+Déterminer les probabilités des événements les suivants :
+
+a. « les jetons sont verts »
+
+b. « il y a au moins 2 jetons verts »
+
+3. . On extrait enfin trois jetons de l'urne mais successivement et sans remettre le jeton tiré dans l'urne. 
+
+Déterminer la probabilité des événements suivants :
+
+a. « Tirer dans l'ordre un jeton vert puis un rouge et enfin un blanc »
+
+b. « Tirer parmi les $3$ un seul jeton portant le numéro $0$ »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 18}}}}
+La fédération de lutte veut classer par ordre de mérite, sans ex-aequo les $3$ meilleurs lutteurs de l'arène de l'année $2003$, parmi $8$ lutteurs choisie par les journalistes sportifs dont Bombardier Yékini et Tyson.
+
+On suppose l'hypothèse d'équiprobabilité vérifiée.
+
+1. Déterminer le nombre de classements possibles.
+
+2. Calculer les probabilités de chacun des événements suivant s :
+
+a. E : « Bombardier figure parmi les $3$ lutteurs choisis »
+
+b. F : « Bombardier est élus meilleur lutteur parmi les $3$ lutteurs choisis »
+
+c. G : « les $3$ lutteurs choisis sont Tyson, Bombardier et Yékini dans le désordre. »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 19}}}}
+Une urne contient $7$ jetons portant les lettres $A$, $T$, $E$, $H$, $M$, $U$ et $X.$
+On convient qu(un mot est un assemblage de lettres distinctes ou non, ayant un sens ou non.
+
+1. On tire successivement $4$ jetons de l'urne en remettant après chaque tirage le jeton tiré dans l'urne.
+
+On note dans l'ordre les lettres sur les jetons tirés pour former un mot de $4$ lettres.
+
+a. Déterminer le nombre de mots possibles qu'on peut ainsi former.
+
+b. Déterminer la probabilité des événements $F$ et $G$ suivants :
+
+F : « former un mot commençant par une consonne »
+
+G : « former un mot commençant par $M$ et ne contenant qu'une voyelle »
+
+2. On tire successivement les $7$ jetons de l'urne, sans remettre le jeton tiré dans l'urne et on les aligne dans l'ordre de tirage pour former un mot de $7$ lettres.
+
+a. Déterminer le nombre de cas possibles.
+
+b. Déterminer la probabilité des événements $F$ et $G$ suivants :
+
+H : « former un mot commençant par une consonne et se terminant par une consonne »
+
+G : « former le mot MATHEUX »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 20}}}}
+Une urne contient quatre boules rouges , trois boules noires et deux boules vertes indiscernables au toucher
+
+I. On tire deux boules dans cette urne, successivement, en remettant chaque boule tirée dans l'urne avant de prendre la suivante.
+
+1. Quel est le nombre de tirages possibles ?
+
+2. Calculer la probabilité de chacun des événements ci-dessous
+
+A : « obtenir deux boules rouges »
+
+B : « obtenir une boule verte et une noire dans cet ordre »
+
+C : « obtenir deux boules de la même couleur »
+
+D : « obtenir deux boules dont les couleurs sont différentes »
+
+E : « obtenir trois boules rouges »
+
+II. On tire maintenant trois boules simultanément de l'urne.
+
+1. Quel est le nombre de tirages possibles ?
+
+2. Calculer la probabilité d’obtenir au moins une boule verte.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 21}}}}
+Le foyer d'un lycée doit élire son bureau composé d'un président, d'un vice- président et d'un trésorier.
+
+Parmi $20$ candidats se trouve $12$ filles dont $5$ en terminale et $8$ garçons dont $4$ en terminal. 
+
+On suppose que les candidats ont la même chance d'être élus :
+
+1. A : « les personnes choisies sont de même sexe. »
+
+2. B : « le président est un garçon et les autres sont des filles. »
+
+3. C : « le bureau est constitué de $2$ filles et $1$ garçon. »
+
+4. D : « Le bureau comprend un président et un vice- président de sexes différents. »
+
+5. E : « Le bureau comprend au moins un élève de terminale »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 22}}}}
+A l'occasion des fêtes de fin d'année, les élèves de la promotion terminale du lycée organisent un jeu qui consiste à tirer trois jetons dans un sac.
+
+$\bullet\ $Si le joueur tire un jeton blanc, il gagne $1000$ ;
+
+$\bullet\ $S'il tire un jeton rouge, il ne gagne rien ; 
+
+$\bullet\ $S'il tire un jeton vert, il gagne $500\,F$
+
+Dans le sac ils disposent de dix jetons ($4$ jetons blancs, $4$ jetons rouges et $2$ jetons verts).
+
+On donnera les résultats sous forme de fraction irréductible.
+
+1. Calculer : $C_{10}^{5}$ et $A_{10}^{5}$ (on pourra utiliser la calculatrice)
+	
+2. Un élève tire simultanément trois jetons du sac.
+
+a. Montrer que le nombre de résultats possibles est $120.$
+
+b. Soit l'événement $A$ : « Le joueur gagne $2500\,F$ »
+
+Montrer que la probabilité de l'événement $A$ est égale à $\dfrac{3}{10}$
+
+c. Soit l'événement $B$ : « Le joueur gagne $0\,F$ » .
+	
+Calculer la probabilité de $B.$
+
+3. Un deuxième élève tire, au hasard et successivement, trois jetons, le jetant étant remis dans le sac avant le tirage du jeton suivant.
+
+a. Montrer que le nombre de résultats possibles est $1000.$
+
+b. Soit l'événement $C$ : « Le joueur gagne $2500\,F$ » . Montrer que la probabilité de l'événement $C$ est égale à $\dfrac{12}{120}$
+
+c. Calculer la probabilité de l'événement $E.$ : « Le joueur gagne $2500\,F$ ou $500\,F$ ».
+\section*{\underline{\textbf{\textcolor{red}{Exercice 23}}}}
+Pour une épreuve orale, trois professeurs d'histoire et de géographie $X$, $Y$ et $Z$ proposant chacun des exercices : un de géographie et un d'histoire.
+
+Chaque élève doit obligatoirement traiter deux de ces six exercices pris au hasard ( on aura une équiprobabilité).
+
+1. Quel est le nombre de choix possibles pour un candidat ?
+
+2. Doudou étant un candidat à cette épreuve , déterminer la probabilité :
+
+a. Qu'il choisisse les deux exercices de l'enseignant $Y.$
+
+b. Qu'il choisisse deux exercices géographie.
+
+c. Qu'il choisisse deux exercices proposés par deux enseignants différents.
+\section*{\underline{\textbf{\textcolor{red}{Exercice 24}}}}
+NB : Les résultats des calculs de probabilité seront donnés à $10^{-4}$ près
+
+Une entreprise produit par jour $100$ téléphones indiscernables au toucher et de couleurs différentes.
+
+40 sont rouges, le nombre de téléphones bleus est le triple de celui des téléphones gris.
+
+1. Justifie qu'il y a 15 téléphones gris parmi les 100 téléphones.
+
+2. Chaque jour, un contrôleur choisit au hasard $3$ téléphones pour un test de qualité.
+
+a. Justifie qu'il y a $161700$ possibilités de choisir ces 3 téléphones.
+
+b. Calcule la probabilité des événements suivants :
+
+A : « les trois téléphones choisis sont de même couleur »
+
+B : « il y a exactement deux téléphones rouges parmi les téléphones choisis »
+
+C : « il y a au moins un téléphone gris parmi les trois téléphones choisis »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 25}}}}
+Un dé dont les faces sont numérotées de $1$ à $6$ est truquée de telle manière que l'apparition du numéro du $5$ est deux fois « plus probable » que l'apparition de chacun des autres numéros .
+
+On note Pi la probabilité
+
+du numéro $\left(i=1, 2, 3, \ldots\ldots 6\right)$
+
+1. Calculer la probabilité d'apparition de chaque numéro.
+	
+2. Dans cette question, on suppose que $P_{1}=P_{2}=P_{3}=P_{4}=P_{6}=\dfrac{1}{7}$ et $P_{5}=\dfrac{2}{5}.$
+
+Calculer les probabilités des événements suivants :
+
+A : « Obtenir un numéro pair »
+
+B : « Obtenir un numéro impair »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 26}}}}
+5 formations politiques de même envergure dont celui au pouvoir partent en compétition électorale.
+
+On suppose la chance pour que deux parties politiques est le même suffrage est nulle.
+
+1. Quel est le nombre de classements possibles ?
+
+2. Quel est la probabilité :
+
+a. $ P_{1}$ : pour que le partie au pouvoir gagne les élections ?
+
+b. $P_{2}$ : pour que le partie au pouvoir soit parmi les trois formations politiques ?
+
+c. $P_{3}$ : pour qu'à l'issue des élections le partie au pouvoir ne soit ni premier ni dernier ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 27}}}}
+Un $G.I.E$ compte $5$ femmes et $6$ hommes.
+
+Une délégation de $4$ membres doit la représenter à une réunion.
+
+1. De combien de manière peut-on former cette délégation ?
+
+2. Calculer la probabilité des événements suivants :
+
+a. la délégation comprend deux femmes.
+
+b. La délégation comprend au moins deux femmes.
+
+3. Le bureau du $G.I.E $est constitué comme suit : un président, un vise président, un trésorier et un secrétaire.
+
+Tout cumul de postes est exclu :
+
+a. De combien de manière peut-on élire un bureau ?
+
+b. Calculer la probabilité de événements suivants :
+
+A : « Le bureau formé comprend au plus trois femmes »
+
+B : « Le bureau formé est présidé par un homme et une femme est trésorière »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 28}}}}
+Des observateurs estiment que les huit équipes suivantes sont favorites à la coupe du monde $2014.$ Le Brésil, l’Argentine, l'Allemagne, la Tchéquie, la Hollande, l'Angleterre et la France.
+
+1. De combien de façons peut-on classer les huit équipes pour $4$ places.
+	
+2. Calculer la probabilité des événements suivants :
+
+a. A : « Une équipe du Sud emporte la coupe »
+
+b. B : « Deux équipes européennes sont première et deuxième »
+
+c. C : « Les deux premières équipes ne sont pas du même continent »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 29}}}}
+Une urne contient $10$ jetons indiscernables au toucher sur lesquels on inscrit des nombres : $3$ jetons portant le nombre $15$ ; $5$ jetons le nombre $10$ et $2$ nombres le nombre $20.$
+
+On tire simultanément $2$ jetons de l'urne.
+
+(N.B : tous les résultats seront donnés sous forme de fraction irréductible)
+
+1. Calculer les probabilités des événements suivants :
+
+A : « Obtenir $2$ jetons portant le même nombre »
+
+B : « Obtenir $2$ jetons portant des nombres pair »
+
+C : « tirer $2$ jetons portant des nombres de même parité »
+
+2. On effectue le somme des nombres obtenus.
+
+Compléter le tableau suivant, et calculer la probabilité de l'événement
+
+D : « Obtenir une somme supérieure à $33$ »
+	$$\begin{array}{|l|c|c|c|c|c|c|} \hline \text{Nombre tirés }&15\text{ et }15&15\text{ et }10&&10\text{ et }10&&\\ \hline \text{Somme des deux }&&&&\\ \text{nombres }&&&&\\ \hline \end{array}$$
+\section*{\underline{\textbf{\textcolor{red}{Exercice 30}}}}
+Un sac contient $10$ jetons indiscernables au toucher et numérotés $10$, $1$, $2$, $3$, $4$,$5$, $6$, $7$, $8$ et $9.$
+
+On tire successivement sans remise $4$ jetons du sac et les aligne dans l'ordre où ils été tiré pour former un nombre.
+
+1. Donner le plus petit et le plus grand de ces nombres.
+
+2. Vérifier qu'on peut obtenir $5040$ nombres possibles.
+
+3. Parmi ces nombres :
+
+a. Justifier qu'il y'a $1120$ qui commencent par un chiffre pair et se terminent par un chiffre pair.
+
+b. Combien ne contiennent que des chiffres pairs ?
+
+c. Combien ne contiennent pas le chiffre zéro ?
+
+4. Soit les événements $A$, $B$ et $C$ définis par :
+
+A : « Obtenir un nombre de $4$ chiffres »
+
+B : « Obtenir un nombre supérieur ou égal à $9000$ »
+
+C : « Obtenir un nombre de quatre chiffres, inférieur ou égal à $5000$ »
+
+a. Montrer que la probabilité de $A$ est $P(A)=\dfrac{9}{10}$
+
+b. Calculer $P(B)$ et , les probabilités respectives de B et C (sous forme de fraction irré-ductible).
+\section*{\underline{\textbf{\textcolor{red}{Exercice 31}}}}
+Les $37$ élèves d'une classe de terminale $L$ se répartissent de façon suivants :
+
+$\begin{array}{|l|c|c|c|} \hline &\text{ Filles }&\text{ Garçons }&\text{ Totaux }\\ \hline \text{ Apprenant la mathématique }&18&10&\\ \hline \text{N’apprenant pas la mathématique }&&9\\ \hline \text{Totaux }&23&&\\ \hline \end{array}$
+
+141. Compléter le tableau suivant.
+
+2. On choisit un élève de cette classe au hasard.
+
+a. Quelle est la probabilité qu'il soit un garçon ?
+
+b. Quelle est la probabilité qu'il soit une fille ?
+
+c. Quelle est la probabilité qu'il soit une fille apprenant la mathématique ?
+
+d. Quelle est la probabilité qu'il soit un garçon n'apprenant pas la mathématique ?
+	
+3. L'élève choisit une fille, quelle est la probabilité qu'elle apprenne la mathématique ?
+\section*{\underline{\textbf{\textcolor{red}{Exercice 32}}}}
+Pour lutter contre la propagation du virus de la maladie du« COVID-19 » , l'Institut pasteur de Dakar réalise des tests sur $45$ patients suspects dont $20$ cas contacts suivis, $15$ cas issus de la transmission communautaire et $10$ cas importés. Pour faire une prévision statistique des données, le chef de service des maladies infectieuses de l'institut tire simultanément trois patients au hasard.
+
+1. Quel est l'univers $\Omega$ associé à cette épreuve ? Calculer son cardinal.
+
+2. Calculer en pourcentage les probabilités des événements suivants :
+
+a. A : « Obtenir $3$ patients de même groupe »
+
+b. B : « Obtenir exactement $2$ cas communautaires »
+
+c. C : « Obtenir aucun cas communautaires »
+
+d. D : « Obtenir $2$ cas suivis et $1$ cas importé »
+\section*{\underline{\textbf{\textcolor{red}{Exercice 33}}}}
+Un sac contient neuf jetons portant respectivement : $1$, $2$,$3$, $4$, $5$, $6$, $7$,$8$ et $9.$
+
+On suppose que tous les tirages sont équiprobables.
+
+1. On tire successivement, sans remise, trois jetons du sac .
+
+On forme ainsi un nombre de trois chiffres, le premier jetons donne le chiffre des unités ,le second celui des dizaines et le troisième celui des centaines Calculer la probabilité pour que :
+
+a. Le chiffre des unités du nombre obtenu soit $9.$
+
+b. Le chiffre $9$ figure dans le nombre obtenu.
+
+c. La somme des chiffres du nombre obtenu soit $9.$
+
+2. On tire un jeton du sac, on note le chiffre qu'il porte puis on le remet du sac . 
+	
+	On répète trois fois cette opération (autrement dit, on tire successivement avec remise trois jetons).
+
+On obtient ainsi un nombre de trois chiffre de la même façon qu'à la question $N°1.$
+Calculer les probabilités pour que :
+
+a. le chiffre des unités du nombre soit $9.$
+
+b. Le chiffre $9$ figure dans le nombre obtenu.
+
+c. Le chiffre $9$ figure exactement une fois dans le nombre obtenu.
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 34}}}}
+Dans une maison vivent Fatou, son mari, ses deux filles, sa fille, sa sœur, son beau frère, sa belle-mère, la femme de ménage et un gardien.
+
+1. Combien de membre compte la famille ?
+
+2. Donner le nombre d'hommes et de femmes dans la maison.
+
+3. Un membre de la maison n'ayant pas respecté les signes sanitaires a été testé positif à la covid- $19$ et a contaminé $2$ membres de la maison. 
+
+Une voisine curieuse essaye de deviner au hasard et simultanément les $3$ membres de la maison testés positifs.
+
+a. Quelle est le nombre de choix possibles ?
+
+b. Quelle est la probabilité qu'elle ait choisit que des femmes ?
+	
+c. Quelle est la probabilité qu'elle ait choisit Fatou, un de ses fils et son mari ?
+	
+d. Quelle est la probabilité qu'elle ait choisit au moins un homme ?
+\end{document}
