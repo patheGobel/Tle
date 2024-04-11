@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{color, soul}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{Destinés à la TLe\\Au Lycée de Dindéferlo}
+\title{\textbf{Calcul Intégral}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section*{\underline{\textbf{\textcolor{red}{I. Primitive}}}}
+
+\subsection*{\underline{\textbf{\textcolor{red}{1. Définition}}}}
+Une fonction $F$ est dite être une primitive d'une fonction $f$ sur un intervalle $I$ si $F$ est dérivable sur $I$ et si pour tout $x$ dans $I$, $F'(x) = f(x)$.
+
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Trouver une primitive de la fonction $f(x) = 3x^2$.
+
+\subsection*{\underline{\textbf{\textcolor{red}{Solution}}}}
+Une primitive de $f$ est la fonction $F(x) = x^3 + C$, où $C$ est une constante.
+
+\subsection*{\underline{\textbf{\textcolor{red}{2. Propriétés}}}}
+Une Fonction admet une infinité de prmitive.
+
+Autrement dit: Les primitives d'une même fonction diffèrent d'une constante.
+\subsection*{\underline{\textbf{\textcolor{red}{3. Primitive des fonctions usuelles}}}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+fonction \(f\) & Primitive \(F\) \\ \hline
+\(a\) & \(ax + C\) \\ \hline
+\(ax^{n}\) & \(\frac{ax^{n+1}}{n+1} + C\) \\ \hline
+\(\frac{1}{x^{n}}\) & \(\frac{-1}{(n-1)x^{n-1}} + C\) \\ \hline
+\(\frac{1}{\sqrt{x}}\) & \(2\sqrt{x} + C\) \\ \hline
+\(e^{ax}\) & \(\frac{1}{a}e^{ax} + C\) \\ \hline
+\(\frac{u'}{u}\) & \(\ln |u| + C\) \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Calculer $\int_{0}^{2} 4x^3 \,dx$.
+
+\subsection*{\underline{\textbf{\textcolor{red}{Solution}}}}
+La primitive de $4x^3$ est $F(x) = x^4 + C$. Ainsi, 
+\[
+\int_{0}^{2} 4x^3 \,dx = [x^4]_{0}^{2} = 2^4 - 0^4 = 16.
+\]
+\section*{\underline{\textbf{\textcolor{red}{II.Integrale des fonctions}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Défintiton et propriété}}}}
+Soit $f$ une fonction continue sur un intervalle $I$, on appelle intégrale de $f$ prise entre a et b le réel noté:
+
+$\int_{a}^{b}f(x)dx=F(b)-F(a)$
+
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-2.243449863788017,
+xmax=2.579354548354068,
+ymin=-1.2487544863289648,
+ymax=1.7859605615202274,
+xtick={-2.2,-2,...,2.4},
+ytick={-1.2000000000000002,-1.0000000000000002,...,1.6},]
+\clip(-2.243449863788017,-1.2487544863289648) rectangle (2.579354548354068,1.7859605615202274);
+\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-2.243449863788017:2.579354548354068] plot(\x,{(\x)^(2)-(\x)^(3)+(\x)^(5)});
+\draw [line width=2pt,color=ffqqqq] (-0.3932074994028332,0.20600719848518462)-- (-0.4,0);
+\draw [line width=2pt,color=ffqqqq] (-1.2017951223709928,0.6730904551654109)-- (-1.2,0);
+\begin{scriptsize}
+\draw[color=qqwuqq] (-1.4375504319940398,-1.187367615547783) node {$f$};
+\draw[color=ffqqqq] (-0.39554765104167,-0.09499612010829164) node {$b$};
+\draw[color=ffqqqq] (-1.107005743172291,0.1599954969827712) node {$a$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\subsection*{\underline{\textbf{\textcolor{red}{Exemple}}}}
+Calculer:
+\[\int_{1}^{2}x^{2}+1dx\] et \[\int_{2}^{4}\frac{2x}{x^{2}-3} dx\]
+\subsection*{\underline{\textbf{\textcolor{red}{Solution}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Remarque}}}}
+La valeur absolue de l'intégrale d'une fonction $f$ est l'aire de la surface délimité par l'axe $(x'x)$ de la courbe representative de $f$ et les droites d'équations $x=a$ et $x=b$
+
+\end{document}
