@@ -70,7 +70,6 @@ Soit $f$ une fonction continue sur un intervalle $I$, on appelle intégrale de $
 
 $\int_{a}^{b}f(x)dx=F(b)-F(a)$
 
-\definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
 \begin{axis}[
@@ -78,20 +77,20 @@ x=1cm,y=1cm,
 axis lines=middle,
 ymajorgrids=true,
 xmajorgrids=true,
-xmin=-2.243449863788017,
-xmax=2.579354548354068,
-ymin=-1.2487544863289648,
-ymax=1.7859605615202274,
-xtick={-2.2,-2,...,2.4},
-ytick={-1.2000000000000002,-1.0000000000000002,...,1.6},]
-\clip(-2.243449863788017,-1.2487544863289648) rectangle (2.579354548354068,1.7859605615202274);
-\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-2.243449863788017:2.579354548354068] plot(\x,{(\x)^(2)-(\x)^(3)+(\x)^(5)});
-\draw [line width=2pt,color=ffqqqq] (-0.3932074994028332,0.20600719848518462)-- (-0.4,0);
-\draw [line width=2pt,color=ffqqqq] (-1.2017951223709928,0.6730904551654109)-- (-1.2,0);
+xmin=-3.217293613624258,
+xmax=4.076023470870133,
+ymin=-7.615190605118021,
+ymax=6.64985001698064,
+xtick={-3,-2,...,25},
+ytick={-7,-6,...,6},]
+\clip(-3.217293613624258,-7.615190605118021) rectangle (25.076023470870133,6.64985001698064);
+\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-3.217293613624258:25.076023470870133] plot(\x,{sin(((\x))*180/pi)});
+%\draw [line width=2pt,color=ffqqqq] (-0.3,0.2)-- (-0.4,0);
+%\draw [line width=2pt,color=ffqqqq] (-1.2,0.6)-- (-1.2,0);
 \begin{scriptsize}
-\draw[color=qqwuqq] (-1.4375504319940398,-1.187367615547783) node {$f$};
-\draw[color=ffqqqq] (-0.39554765104167,-0.09499612010829164) node {$b$};
-\draw[color=ffqqqq] (-1.107005743172291,0.1599954969827712) node {$a$};
+\draw[color=qqwuqq] (-3.,0.11) node {$C_{f}$};
+%\draw[color=ffqqqq] (0.5,-0.09) node {$b$};
+%\draw[color=ffqqqq] (-0.5,0.1) node {$a$};
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
@@ -102,4 +101,32 @@ Calculer:
 \subsection*{\underline{\textbf{\textcolor{red}{Remarque}}}}
 La valeur absolue de l'intégrale d'une fonction $f$ est l'aire de la surface délimité par l'axe $(x'x)$ de la courbe representative de $f$ et les droites d'équations $x=a$ et $x=b$
 
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-3.217293613624258,
+xmax=4.076023470870133,
+ymin=-7.615190605118021,
+ymax=6.64985001698064,
+xtick={-3,-2,...,25},
+ytick={-7,-6,...,6},]
+\clip(-3.217293613624258,-7.615190605118021) rectangle (25.076023470870133,6.64985001698064);
+\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-3.217293613624258:25.076023470870133] plot(\x,{sin(((\x))*180/pi)});
+%\draw [line width=2pt,color=ffqqqq] (-0.3,0.2)-- (-0.4,0);
+%\draw [line width=2pt,color=ffqqqq] (-1.2,0.6)-- (-1.2,0);
+\begin{scriptsize}
+\draw[color=qqwuqq] (-3.,0.11) node {$C_{f}$};
+%\draw[color=ffqqqq] (0.5,-0.09) node {$b$};
+%\draw[color=ffqqqq] (-0.5,0.1) node {$a$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\\
+$\mathrm{A}ire=\mid \int_{a}^{b}f(x) dx \mid Ua$
+
+$\mid F(b)-F(a)\mid Ua$ avec $Ua$ unité d'aire
 \end{document}
