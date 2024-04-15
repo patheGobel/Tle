@@ -31,135 +31,235 @@
 \begin{document}
 \maketitle
 \newpage
-
 \section*{\underline{\textbf{\textcolor{red}{I. Dénombrement}}}}
-Dans cette rubrique, on ne considère que des ensembles finis, c'est-à-dire des ensembles dont on peut compter les éléments.
- 
-On appelle cardinal d'un ensemble fini $A$ le nombre de ses éléments.
+\subsection*{\underline{\textbf{\textcolor{red}{1. Notion d’ensemble fini}}}}
+Si on collectionne des objets quelconques (de même nature ou non) que l’on peut distinguer deux à deux 
+par un critère alors on définit un ensemble. Chaque objet d’un ensemble est appelé élément de l’ensemble. 
+Oralement : Un ensemble est souvent noté par une lettre majuscule tandis qu’un élément de cet 
+ensemble est noté par une lettre minuscule. Le nombre d’éléments d’un ensemble \(E\) est dit cardinal 
+de \(E\) et est noté \(\text{card} (E)\).
+\subsection*{\underline{\textbf{\textcolor{red}{a. Exemple}}}}
+Notons \(E\), l’ensemble des lettres du mot ``diallo'':
+\begin{itemize}
+    \item Les éléments de \(E\) sont les lettres : \(d\), \(i\), \(a\), et \(l\). On note \(E = \{d, i, a, l\}\) ou 
+    \(E = \{d, l, a, i\}\) ou \(E = \{a, l, d, i\} = \cdots\)
+    \item \(d\) est un élément de \(E\) donc on écrit \(d \in E\) % Coloration d'une expression spécifique
+    \item Le cardinal de \(E\) est \(\text{card}(E) = 4\).
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{b. Remarque}}}}
+Un ensemble qui ne contient aucun élément est dit ensemble vide et est noté \(\emptyset\). On a donc 
+\(\text{card}(\emptyset) = 0\). Par exemple, l’ensemble \(E\) des élèves de la TL’ de 2019 du Lycée de 
+Dindéfelo ayant pour nom de famille ``diallo'' est l’ensemble vide.
+\subsection*{\underline{\textbf{\textcolor{red}{2. Parties d’un ensemble}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{a. Définition}}}}
+Un ensemble \(A\) est une partie (ou sous-ensemble) d’un ensemble \(E\) si tous les éléments de \(A\) sont aussi des éléments de \(E\). Dans ce cas, on écrit \(A \subset E\).
+\subsection*{\underline{\textbf{\textcolor{red}{b. Intersection de deux ensembles}}}}
+Soient \( A \) et \( B \) deux parties d’un ensemble \( E \). L’intersection de \( A \) et \( B \) est la partie de \( E \) notée \( A \cap B \) dont les éléments sont ceux qui sont communs à \( A \) et \( B \).
+Si \( A \) et \( B \) n’ont aucun élément en commun alors \( A \cap B = \emptyset \) et on dit que \( A \) et \( B \) sont disjoints.
+\subsection*{\underline{\textbf{\textcolor{red}{c. Réunion de deux ensembles}}}}
+La réunion de deux parties \( A \) et \( B \) d’un ensemble \( E \) est la partie de \( E \) notée \( A \cup B \) dont les éléments sont ceux qui sont soit dans \( A \) seulement, soit dans \( B \) seulement, soit dans \( A \) et \( B \). On a les propriétés suivantes :
+\begin{itemize}
+    \item \( \text{card}(A \cup B) = \text{card}(A) + \text{card}(B) - \text{card}(A \cap B) \)
+    \item Si \( A \) et \( B \) sont disjoints alors la propriété devient \( \text{card}(A \cup B) = \text{card}(A) + \text{card}(B) \)
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{d. Complémentaire d’une partie d’un ensemble}}}}
+Soit \( A \) une partie de \( E \). Le complémentaire de \( A \) dans \( E \) est la partie de \( E \) notée \( \overline{A} \) dont les éléments sont ceux qui ne sont pas dans \( A \).\\
 
-Il est noté Card$(A).$
-\subsection*{\underline{\textbf{\textcolor{blue}{Propriétés du cardinal}}}}
-$\bullet\ \text{Card}\phi=0$
+Oralement : Par exemple si \( E \) est l’ensemble des élèves de la TL’, \( A \), l’ensemble des garçons de la TL’ alors \( \overline{A} \), le complémentaire de \( A \) dans \( E \) est l’ensemble des filles de la TL’. On a les propriétés suivantes :
+\begin{itemize}
+    \item \( A \cap \overline{A} = \emptyset \)
+    \item \( A \cup \overline{A} = E \)
+    \item \( \text{card}(A) + \text{card}(\overline{A}) = \text{card}(E) \)
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{3. Outils de dénombrement}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{a. p-liste}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{i. Définition et exemple }}}}
+Soit $E$ un ensemble de cardinal $n$ et $p$ un entier naturel tel que $p \geq 1$. Une p-liste d’éléments de $E$ est une liste (suite ordonnée) de $p$ éléments distincts ou non de $E.$
 
-$\bullet\ \text{Si }A\text{ et }B$ sont ensembles finis, $\text{Card}(A\cup B)=\text{Card}(A)+\text{Card}(B)-\text{Card}(A\cap B).$
+Par exemple si $E = {f; a; l}$ alors
+\begin{itemize}
+\item[•] \textcolor{teal}{$ff; af ; al ;\cdots$sont des 2-listes d’éléments de $E$.}
+\item[•] \textcolor{teal}{$ffa ; fal ;aaa\cdots$ sont des 3-listes d’éléments de $E$.}
+\item[•] \textcolor{teal}{$faal ; llff\cdots$ sont des 4-listes d’éléments de E.}
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{ii. Propriété}}}}
+Soit \(E\) un ensemble de cardinal \(n\) et \(p\) un entier \(\geq 1\). Le nombre de p-listes d’éléments de \(E\) est \(n^{p}\).
 
-	$\bullet\ A\times B$ Représentant l'ensemble des couples $(a\;,\ b)$ avec $a$ élément de $A$ et $b$ élément de $B$, $\text{Card}(A\times B)=\text{Card}(A)\times\text{Card}(B).$
-	
-\textbf{\textcolor{blue}{$P-$listes, arrangements et permutations}}
-\subsection*{\underline{\textbf{\textcolor{red}{1.Définitions :}}}}
-1. Soit $E$ un ensemble fini de cardinal $n.$
+Par exemple, si \(E = \{f, a, l\}\) alors :
+\begin{itemize}
+    \item[•] \textcolor{teal}{Le nombre de 2-listes d’éléments de \(E\) est \(3^{2} = 9\)}
+    \item[•] \textcolor{teal}{Le nombre de 3-listes d’éléments de \(E\) est \(3^{3} = 27\)}
+    \item[•] \textcolor{teal}{Le nombre de 4-listes d’éléments de \(E\) est \(3^{4} = 81\)}
+\end{itemize}
 
-On appelle $p$-liste de $E$ toute liste ordonnée d'éléments distincts ou non de $E.$
+\textcolor{red}{Oralement :} Pour calculer \(n^{p}\) avec la calculatrice, on utilise la touche \(y^{x}\) de la façon suivante : on tape \(n\) sur la calculatrice d'abord, puis on appuie sur la touche \(y^{x}\), puis on tape \(p\) sur la calculatrice et enfin, on appuie sur la touche \(=\) et le résultat s’affiche.
+\subsection*{\underline{\textbf{\textcolor{red}{iii. Tirages successifs avec remise}}}}
+Considérons une urne qui contient \(n\) éléments et soit \(p\) un entier tel que \(p \geq 1\). Lorsqu'on tire successivement avec remise \(p\) éléments parmi ces \(n\) éléments de l’urne, le nombre de ces tirages successifs avec remise est égal au nombre de p-listes d’éléments pris parmi \(n\) éléments, c’est-à-dire \(n^{p}\).
 
-2. Soit $E$ un ensemble fini de cardinal $n$ et $p$ un entier tel que $\leq p\leq n.$
+\textcolor{red}{Oralement :} Ceci consiste à les tirer un à un mais en notant l’élément tiré puis en le remettant à chaque fois dans l’urne avant de tirer le suivant. À la fin des \(p\) tirages successifs, on obtient quelque chose que l’on peut identifier à une liste de \(p\) éléments distincts ou non issus de l’urne, c’est-à-dire une p-liste d’éléments de l’urne. Ainsi, le nombre de tirages successifs avec remise de \(p\) éléments pris parmi les \(n\) éléments d’une urne est \(n^{p}\).
+\subsection*{\underline{\textbf{\textcolor{red}{b. Arrangement}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{i. Définition et exemple}}}}
+Soit \( E \) un ensemble de cardinal \( n \) et \( p \) un entier naturel tel que \( 1 \leq p \leq n \). Un \textbf{arrangement} de \( p \) éléments de \( E \) est une liste (suite ordonnée) de \( p \) éléments distincts de \( E \).
 
-On appelle arrangement à $p$ éléments de $E$ toute $p-$liste d'éléments distincts  de $E.$
+\textbf{Par exemple}, si \( E = \{f, a, l\} \), alors:
+\begin{itemize}
+    \item \( fa, af, lf, \ldots \) sont des arrangements de 2 éléments de \( E \).
+    \item \( fal, lfa, \ldots \) sont des arrangements de 3 éléments de \( E \).
+\end{itemize}
 
-On appelle permutation de $E$ tout arrangement des $n$ éléments de $E.$
-\section*{\underline{\textbf{\textcolor{red}{Remarque :}}}}
-$\bullet\ $Les listes ordonnées de $p$ éléments pris parmi $n$ avec répétition possible sont appelées $p-$listes.
-
-$\bullet\ $Les listes ordonnées de $p$ éléments pris parmi $n$ sans répétition sont appelées arrangements.
-
-Si $p=n$, un arrangement porte le nom de permutation.
-\subsection*{\underline{\textbf{\textcolor{red}{1.Théorèmes:}}}}
-1. Soit $E$ un ensemble fini de cardinal $n.$
-
-Alors le nombre de $p-$listes de $E$ est $n^{p}.$
-
-2. Soit $E$ un ensemble fini de cardinal $n$ et $p$ un entier tel que $1\leq p\leq n.$
-
-Alors le nombre d'arrangements à $p$ éléments de $E$ est le nombre noté : $A_{n}^{p}=n(n-1)\ldots\ldots(n-p+1)$
-
-$($C'est le produit de $p$ entiers consécutifs décroissant à partir de $n)$, et le nombre de permutations de $E$ est le nombre noté : $n\ !=1\times 2\times\ldots\times n$
-
-$($C'est le produit de tous les entiers de $1$ jusqu'à $n).$
-\subsection*{\underline{\textbf{\textcolor{blue}{Combinaisons}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{2.Définitions :}}}}
-Si $E$ est un ensemble fini, on appelle combinaison à $p$ éléments de $E$ tout sous-ensemble de $E$ de cardinal $p(0\leq p\leq n).$
-\section*{\underline{\textbf{\textcolor{red}{Remarque :}}}}
-La combinaison à $0$ élément de $E$ est noté $\Phi.$
-\subsection*{\underline{\textbf{\textcolor{red}{3.Théorèmes:}}}}
-Soit $E$ un ensemble fini de cardinal $n.$
-
-Alors le nombre de combinaisons à $p$ éléments de $E$ est le nombre noté :
-
-$C_{n}^{p}=\dfrac{A_{n}^{p}}{p!}=\dfrac{n!}{p!(n-p)!}.$
-\subsection*{\underline{\textbf{\textcolor{blue}{Propriétés des $C_{n}^{p}$}}}}
-$\bullet\ C_{n}^{0}=C_{n}^{n}=1$
-
-$\bullet\ C_{n}^{p}=C_{n}^{n-p}$
-
-$\bullet\ C_{n}^{p}=C_{n-1}^{p}+C_{n-1}^{p-1}$
-
-(Formule pascal)
-
-Cette dernière formule permet de construire le triangle de Pascal : 
+\textbf{Oralement :} Comme \( E \) contient 3 éléments, il n’existe pas d’arrangements de plus de 3 éléments de \( E \).
+\subsection*{\underline{\textbf{\textcolor{red}{ii. Propriété}}}}
+Le nombre d'arrangements de \( p \) éléments pris parmi \( n \) éléments d'un ensemble est noté \( A_n^p \) (on lit "A n p") et est égal au produit des \( p \) entiers consécutifs dont le plus grand est \( n \). C'est-à-dire:
 \[
-\begin{array}{ccccccc}
-1 \\
-1 & 1 \\
-1 & 2 & 1 \\
-1 & 3 & 3 & 1 \\
-1 & 4 & 6 & 4 & 1 \\
-1 & 5 & 10 & 10 & 5 & 1 \\
-1 & 6 & 15 & 20 & 15 & 6 & 1 \\
-\end{array}
+A_n^p = n \times (n-1) \times \cdots \times (n-p+1)
 \]
 
-\subsection*{\underline{\textbf{\textcolor{blue}{Formule du binôme de Newton}}}}
-Étant donné deux réels $a$ et $b$ un entier naturel, on démontre l'égalité
+\textbf{Exemple:}
+Soit \( E = \{f, a, l\} \) alors:
+\begin{itemize}
+    \item[•] Le nombre d'arrangements de 2 éléments de \( E \) est noté \( A_3^2 \) et est égal à \( A_3^2 = 3 \times 2 = 6 \).
+    \item[•] Le nombre d'arrangements de 3 éléments de \( E \) est \( A_3^3 = 3 \times 2 \times 1 = 6 \).
+\end{itemize}
 
-$(a+b)^{n}=\Sigma_{p=0}^{n}C_{n}^{p}a^{n-p}b^{p}=C_{n}^{0}a^{n}+C_{n}^{1}a^{n-1}b+\ldots+C_{n}^{p}a^{n-p}b^{p}+\ldots+C_{n}^{p}b^{n}.$
-\section*{\underline{\textbf{\textcolor{red}{2. Probabilités}}}}
-\subsection*{\underline{\textbf{\textcolor{red}{2.1 Vocabulaire}}}}
-Une expérience aléatoire est une expérience qu'on  peut répéter autant de fois qu'on veut, qui a plusieurs résultats possibles, et dont un seul se produit à la fois,  sans qu'on puisse le prévoir.
-\subsection*{\underline{\textbf{\textcolor{red}{Exemples :}}}}
-Lancer d'un dé, d'une pièce de monnaie, tirage d'une carte d'un jeu de $32$ cartes $\ldots.$
+\textbf{Calcul sur la calculatrice:}
+Pour calculer \( A_n^p \) avec la calculatrice, on utilise la touche « nPr ».
+\subsection*{\underline{\textbf{\textcolor{red}{iii.Tirages successifs sans remise}}}}
+Le nombre de tirages successifs sans remise de p éléments dans une urne contenant n 
+éléments est $A_{n}^{p}$
+\subsection*{\underline{\textbf{\textcolor{red}{c. Combinaison}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{i. Définition et exemple }}}}
+Soit $E$ un ensemble de cardinal $n$ et $p$ un entier naturel tel que $0 \leq p \leq n$. Une combinaison de 
+$p$ éléments de $E$ est une partie de $E$ contenant $p$ éléments.
 
-L'univers $\Omega$ d'une expérience aléatoire est l'ensemble des résultats possibles.
-\subsection*{\underline{\textbf{\textcolor{red}{Exemples :}}}}
-$\Omega={1\;,\ 2\;,\ 3\;,\ 4\;,\ 5\;,\ 6}$ dans le cas du lancer d'un dé.
+Par exemple si $E = \{f, a, l\}$ alors
 
-Les événements élémentaires sont les résultats possibles d'une expérience aléatoire.
-\subsection*{\underline{\textbf{\textcolor{red}{Exemples :}}}}
-Obtenir $3$ dans le lancer d'un dé.
+$\{f\}$, $\{a\}$ et $\{l\}$ sont les combinaisons d'un élément de $E$.
 
-On appelle événement toute partie de $\Omega$
+$\{f, a\}$, $\{f, l\}$ et $\{a, l\}$ sont les combinaisons de 2 éléments de $E$.
 
-L'univers $\Omega$ tout entier est l'événement certain.
+$E = \{f, a, l\}$ est la seule combinaison de 3 éléments de $E$.
+\subsection*{\underline{\textbf{\textcolor{red}{ii. Propriété }}}}
+Le nombre de combinaisons de $p$ éléments pris parmi $n$ éléments d'un ensemble, noté $C_{n}^{p}$ (on lit $C_{n}^{p}$) est $C_{n}^{p} = \frac{A_{n}^{p}}{1 \times 2 \times 3 \times \cdots \times p}$.
 
-Un événement impossible est un événement qui ne peut pas se produire $($comme obtenir $7$ dans le lancer d'un dé$).$
+Par exemple, si $E = \{f, a, l\}$ alors :
+\begin{itemize}
+  \item[•] Le nombre de combinaisons de 2 éléments de $E$ est $C_{3}^{2} = \frac{A_{3}^{2}}{1 \times 2} = 3$.
+  \item[•] Le nombre de combinaisons de 3 éléments de $E$ est $C_{3}^{3} = \frac{A_{3}^{3}}{1 \times 2 \times 3} = 1$.
+\end{itemize}
+Pour calculer $C_{n}^{p}$ avec la calculatrice, on utilise la touche « n cr ».
+\subsection*{\underline{\textbf{\textcolor{red}{iii. Tirages simultanés}}}}
+\textbf{Tirages simultanés:} Le nombre de tirages simultanés de $p$ éléments dans une urne contenant $n$ éléments est $C_{n}^{p}$.
 
-Il est noté $\Phi$
+\textbf{Résumé:}
 
-Deux événements incompatibles sont deux événements $A$ et $B$ qui ne peuvent pas se produire en même temps : $A\cap B=\Phi.$
+En dénombrement, si dans les objets à dénombrer, il:
+\begin{itemize}
+    \item[•] Y a de l’ordre et une possibilité de répétition d’éléments dans les objets alors on utilise les p-listes. Ainsi un tirage successif avec remise de $p$ éléments correspond à une p-liste.
+    \item[•] Y a de l’ordre mais il n’y a pas de répétition d’éléments dans les objets alors on utilise les arrangements. Ainsi un tirage successif sans remise de $p$ éléments correspond à un arrangement.
+    \item[•] n’y a pas d’ordre et il n’y a pas de possibilité de répétition d’éléments dans les objets alors on utilise les combinaisons. Ainsi un tirage simultané de $p$-éléments correspond à une combinaison.
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice d’application}}}}
+Un lycée a choisi ses 15 délégués de classe : 7 garçons et 8 filles.
 
-On dit alors que $A$ et $B$ sont disjoints.
+\subsection*{1. Pour représenter le lycée à un jumelage, ces délégués doivent choisir entre eux une délégation de 5 membres (les membres de la délégation ne jouent aucun rôle).}
+\begin{enumerate}
+    \item[a.] Combien y a-t-il de délégations possibles ? \\
+    
+    \item[b.] Déterminer le nombre de délégations comprenant 2 garçons et 3 filles. \\
+    
+    \item[c.] Déterminer le nombre de délégations comprenant au moins une fille. \\
+\end{enumerate}
 
-Deux événements contraires sont deux événements disjoints dont la réunion forme $\Omega$
+\subsection*{2. Ces délégués se réunissent pour élire un gouvernement scolaire de 5 membres, comprenant un président, un premier ministre, un ministre de l’intérieur, un ministre de la culture et des sports et un ministre des finances, sans cumul de postes.}
+\begin{enumerate}
+    \item[a.] Déterminer le nombre de gouvernements possibles. \\
+    
+    \item[b.] Déterminer le nombre de gouvernements tels que le président est une fille. \\
+    
+    \item[c.] Déterminer le nombre de gouvernements tel que le ministre de l’intérieur est un garçon. \\
+    
+    \item[d.] Déterminer le nombre de gouvernements comprenant exactement un garçon. \\
+\end{enumerate}
+\section*{\underline{\textbf{\textcolor{red}II. Probabilité}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Expérience aléatoire et univers}}}}
+\begin{enumerate}
+\item[•]On dit qu’une expérience est aléatoire si on ne peut pas prédire avec certitude son résultat mais on peut décrire l’ensemble de tous ses résultats possibles. Une expérience aléatoire est dite épreuve.
+\item[•]L’ensemble des résultats possibles d’une épreuve est appelé univers et est souvent noté $\Omega$.
+\item[a.] \textbf{Exemple}
 
-L'événement contraire de $A$ est noté $\overline{A}.$
-\subsection*{\underline{\textbf{\textcolor{red}{2.2 Notion de probabilité :}}}}
-A chaque événement élémentaire $\omega$ d'une expérience aléatoire, on peut associer un nombre $p(\omega)$ élément de l'intervalle $[0\;,\ 1].$
+Quand on lance un dé cubique dont les faces sont
 
-Intuitivement, $p(\omega)$ est la limite de la fréquence de réalisation de l'événement élémentaire  quand on répète l'expérience un très grand nombre de fois.
+numérotées de 1 à 6 puis on note le chiffre apparu 
+sur sa face supérieure, on a une épreuve dont l’univers $\Omega = \lbrace 1; 2; 3; 4; 5; 6\rbrace$
+\item[b.] \textbf{Eventualité d’une épreuve}
 
-La somme des probabilités de tous les événements élémentaires doit être égale à $1.$
+Dans une épreuve, on appelle éventualité, tout résultat possible de l’épreuve. Par exemple dans 
+l’épreuve ci-dessus $1 ; 2 ; 6\cdots $ sont des éventualités.
+\item[c.] \textbf{ Événement d’une épreuve}
 
-La probabilité d'un événement quelconque $A$ est alors la somme des probabilités des événements élémentaires qui le constituent.
-\subsection*{\underline{\textbf{\textcolor{red}{2.3 Propriétés des probabilités :}}}}
-1. Une probabilité est toujours un réel positif en plus petit que $1.$
+Dans une épreuve d’univers $\Omega$, on appelle évènement, toute partie de $\Omega$ c’est-à-dire tout ensemble d’éventualités. Par exemple dans l’épreuve ci-dessus d’univers
+$\Omega= \lbrace1; 2; 3; 4; 5; 6\rbrace $ , $\lll$ obtenir un chiffre 
+pair $\ggg$ $= \lbrace2; 4; 6\rbrace $ est un événement que l’on peut noter A, on a alors 
+$A = \lbrace 2; 4; 6\rbrace$
 
-2. $p(\Omega)=1$ et $p(\Phi)=0.$
+\item[d.] \textbf{Remarque}
 
-3. $p(\overline{A})=1-p(A)\text{ pour tout événement }A$
+Dans une épreuve :
+\item[•] L’ensemble vide est un événement appelé évènement impossible.
+\item[•] L’univers $\Omega$ est un événement appelé évènement certain.
+\item[•] un événement contenant une seule éventualité est appelé évènement élémentaire. Par exemple, 
+les événements $\lbrace 1\rbrace$ ;$\lbrace 5\rbrace$ et $\lbrace 4\rbrace$ sont des événements élémentaires de l’épreuve ci-dessus.
+\end{enumerate}
+\subsection*{\underline{\textbf{\textcolor{red}{2.  Évènement$ \lll A et B \ggg $; événement$ \lll A ou B \ggg $}}}}
+Soient A et B deux événements dans une épreuve.
+\begin{itemize}
+\item[•] L’événement $A \cap B$ est dit événement $\lll$ A et B $\ggg$ 
+\item[•] Quand $A \cap B = \emptyset$, on dit que $A$ et $B$ sont incompatibles.
+\item[•] L’événement $A \cup B$ est dit événement $\lll A$ ou $B \ggg$
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{3. Évènement contraire}}}}
+Dans une épreuve d’univers $\Omega$, L’événement $\overline{A}$ est dit événement contraire de l’événement $A$, Par exemple dans 
+l’épreuve ci-dessus d’univers $\Omega = \lbrace1; 2; 3; 4; 5; 6\rbrace$, l’événement contraire de 
+$A = \lbrace2; 4; 6\rbrace$ est $\overline{A}= \lbrace1; 3; 5\rbrace.$
+\subsection*{\underline{\textbf{\textcolor{red}{4. Notion de probabilité}}}}
+\begin{enumerate}
+\item[a.]\textbf{Hypothèse d’équiprobabilité}
 
-4. $p(A\cup B)=p(A)+p(B)-p(A\cap B)$, pour tous événements $A$ et $B.$
-\subsection*{\underline{\textbf{\textcolor{red}{2.4 Cas de l'équiprobabilité :}}}}
-L'hypothèse d'équiprobabilité dans une expérience aléatoire est celle que tous les événements élémentaires ont la même probabilité.
+Dans une épreuve d’univers $\Omega =\lbrace e_{1}; e_{2}; \cdots ; e_{n}\rbrace$, on dit qu’il y a\\ équiprobabilité si tous les événements élémentaires ont la même probabilité. Dans les exercices, l’équiprobabilité est suggérée par des expressions comme : Dé parfait ; boules indiscernables au toucher ; pièce équilibrée, cartes bien battues ; tirer au hasard $\cdots$
+\item[b.]\textbf{Propriété}
 
-Alors, pour tout événement $A$, on a :
+Dans une épreuve d’univers $\Omega$, s’il y a équiprobabilité alors la probabilité d’un événement $A$ est le réel noté $P(A)$ et défini par $P(A)=\frac{card(A)}{card(\Omega)}$
+\item[c.]\textbf{Remarque}
+\begin{itemize}
+\item[•] La probabilité de l’événement impossible est $P(\emptyset) = 0$
+\item[•] La probabilité de l’événement certain est $P(\Omega)=1$
+\item[•] La probabilité d’un événement $A$, $P(A)$ appartient à l’intervalle $[0; 1]$.
+\end{itemize}
+\item[d.]\textbf{Propriétés}
+\begin{itemize}
+\item[•] $P(A) =1-P(\overline{A})$ et $P(\overline{A}) =1-p(A)$
+\item[•]  Si $A$ et $B$ sont des événements incompatibles alors\\ $P(A \cup B) = P(A) + P(B)$
+\item[•]  Si $A$ et $B$ sont des événements quelconques alors\\ $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+\end{itemize}
+\end{enumerate}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercices d’application}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 1(Bac 2018)}}}}
+Une boite contient les huit lettres du mot CAFEBOOK. Un élève tire au hasard et simultanément 
+trois lettres de la boite.
 
-$$p(A)=\dfrac{\text{Card}A}{\text{Card}\Omega}=\dfrac{\text{Nombre de cas favorables}}{\text{Nombre de cas possibles}}$$
+a. Calculer le nombre de tirages possibles.
+
+b. Calculer la probabilité de tirer deux consonnes et une voyelle.
+
+c. Calculer la probabilité d’obtenir au moins une voyelle.
+\subsection*{\underline{\textbf{\textcolor{red}{Exercice 2(Bac 2019)}}}}
+Un joueur de football dispose de trois paires de chaussures de couleurs différentes dans un tiroir. 
+A quelques heures d’un match, le joueur tire au hasard deux chaussures du tiroir. Déterminer la 
+probabilité des événements suivants :
+
+$A \lll$ Elles appartiennent à la même paire $\ggg$
+
+$B \lll$ Le joueur ne peut pas jouer avec ce tirage $\ggg$
+
+$C \lll$ il y a un pied droit et un pied gauche $\ggg$.
 \end{document}
