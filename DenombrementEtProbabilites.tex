@@ -41,15 +41,15 @@ de \(E\) et est noté \(\text{card} (E)\).
 \subsection*{\underline{\textbf{\textcolor{red}{a. Exemple}}}}
 Notons \(E\), l’ensemble des lettres du mot ``diallo'':
 \begin{itemize}
-    \item Les éléments de \(E\) sont les lettres : \(d\), \(i\), \(a\), et \(l\). On note \(E = \{d, i, a, l\}\) ou 
-    \(E = \{d, l, a, i\}\) ou \(E = \{a, l, d, i\} = \cdots\)
+    \item Les éléments de \(E\) sont les lettres : \(d\), \(i\), \(a\), et \(l\). On note \(E = \{d, i, a, l, o\}\) ou 
+    \(E = \{d, l, a, o, i\}\) ou \(E = \{a, l, d, i, o\} = \cdots\)
     \item \(d\) est un élément de \(E\) donc on écrit \(d \in E\) % Coloration d'une expression spécifique
-    \item Le cardinal de \(E\) est \(\text{card}(E) = 4\).
+    \item Le cardinal de \(E\) est \(\text{card}(E) = 5\).
 \end{itemize}
 \subsection*{\underline{\textbf{\textcolor{red}{b. Remarque}}}}
 Un ensemble qui ne contient aucun élément est dit ensemble vide et est noté \(\emptyset\). On a donc 
-\(\text{card}(\emptyset) = 0\). Par exemple, l’ensemble \(E\) des élèves de la TL’ de 2019 du Lycée de 
-Dindéfelo ayant pour nom de famille ``diallo'' est l’ensemble vide.
+\(\text{card}(\emptyset) = 0\). Par exemple, l’ensemble \(E\) des élèves de la TL de 2024 du Lycée de 
+Dindéfelo ayant pour nom de famille ``kanté'' est l’ensemble vide.
 \subsection*{\underline{\textbf{\textcolor{red}{2. Parties d’un ensemble}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{a. Définition}}}}
 Un ensemble \(A\) est une partie (ou sous-ensemble) d’un ensemble \(E\) si tous les éléments de \(A\) sont aussi des éléments de \(E\). Dans ce cas, on écrit \(A \subset E\).
@@ -60,12 +60,12 @@ Si \( A \) et \( B \) n’ont aucun élément en commun alors \( A \cap B = \emp
 La réunion de deux parties \( A \) et \( B \) d’un ensemble \( E \) est la partie de \( E \) notée \( A \cup B \) dont les éléments sont ceux qui sont soit dans \( A \) seulement, soit dans \( B \) seulement, soit dans \( A \) et \( B \). On a les propriétés suivantes :
 \begin{itemize}
     \item \( \text{card}(A \cup B) = \text{card}(A) + \text{card}(B) - \text{card}(A \cap B) \)
-    \item Si \( A \) et \( B \) sont disjoints alors la propriété devient \( \text{card}(A \cup B) = \text{card}(A) + \text{card}(B) \)
+    \item Si \( A \) et \( B \) sont disjoints alors la propriété devient\\ \( \text{card}(A \cup B) = \text{card}(A) + \text{card}(B) \)
 \end{itemize}
 \subsection*{\underline{\textbf{\textcolor{red}{d. Complémentaire d’une partie d’un ensemble}}}}
 Soit \( A \) une partie de \( E \). Le complémentaire de \( A \) dans \( E \) est la partie de \( E \) notée \( \overline{A} \) dont les éléments sont ceux qui ne sont pas dans \( A \).\\
 
-Oralement : Par exemple si \( E \) est l’ensemble des élèves de la TL’, \( A \), l’ensemble des garçons de la TL’ alors \( \overline{A} \), le complémentaire de \( A \) dans \( E \) est l’ensemble des filles de la TL’. On a les propriétés suivantes :
+Oralement : Par exemple si \( E \) est l’ensemble des élèves de la TL, \( A \), l’ensemble des garçons de la TL alors \( \overline{A} \), le complémentaire de \( A \) dans \( E \) est l’ensemble des filles de la TL. On a les propriétés suivantes :
 \begin{itemize}
     \item \( A \cap \overline{A} = \emptyset \)
     \item \( A \cup \overline{A} = E \)
@@ -75,21 +75,27 @@ Oralement : Par exemple si \( E \) est l’ensemble des élèves de la TL’, \(
 \subsection*{\underline{\textbf{\textcolor{red}{a. p-liste}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{i. Définition et exemple }}}}
 Soit $E$ un ensemble de cardinal $n$ et $p$ un entier naturel tel que $p \geq 1$. Une p-liste d’éléments de $E$ est une liste (suite ordonnée) de $p$ éléments distincts ou non de $E.$
+une liste est notée par des parenthèses.
 
-Par exemple si $E = {f; a; l}$ alors
+Ainsi, la liste $(1,2)\neq (2,1)$
+
+Dans une liste, un élément peut être représenté plusieurs fois. par exemple $(1,2,2)$
+
+Considérons $E = \left\lbrace d; i; a ; l ; o\right\rbrace $ alors
+
 \begin{itemize}
-\item[•] \textcolor{teal}{$ff; af ; al ;\cdots$sont des 2-listes d’éléments de $E$.}
+\item[•] \textcolor{teal}{$(d,i); (a,l) ; (l,o) ;\cdots$sont des 2-listes d’éléments de $E$.}
 \item[•] \textcolor{teal}{$ffa ; fal ;aaa\cdots$ sont des 3-listes d’éléments de $E$.}
 \item[•] \textcolor{teal}{$faal ; llff\cdots$ sont des 4-listes d’éléments de E.}
 \end{itemize}
 \subsection*{\underline{\textbf{\textcolor{red}{ii. Propriété}}}}
 Soit \(E\) un ensemble de cardinal \(n\) et \(p\) un entier \(\geq 1\). Le nombre de p-listes d’éléments de \(E\) est \(n^{p}\).
 
-Par exemple, si \(E = \{f, a, l\}\) alors :
+Par exemple, si \(E = \{d, i,  a, l , o\}\) alors :
 \begin{itemize}
-    \item[•] \textcolor{teal}{Le nombre de 2-listes d’éléments de \(E\) est \(3^{2} = 9\)}
-    \item[•] \textcolor{teal}{Le nombre de 3-listes d’éléments de \(E\) est \(3^{3} = 27\)}
-    \item[•] \textcolor{teal}{Le nombre de 4-listes d’éléments de \(E\) est \(3^{4} = 81\)}
+    \item[•] \textcolor{teal}{Le nombre de 2-listes d’éléments de \(E\) est \(5^{2} = 25\)}
+    \item[•] \textcolor{teal}{Le nombre de 3-listes d’éléments de \(E\) est \(5^{3} = 125\)}
+    \item[•] \textcolor{teal}{Le nombre de 4-listes d’éléments de \(E\) est \(5^{4} = 625\)}
 \end{itemize}
 
 \textcolor{red}{Oralement :} Pour calculer \(n^{p}\) avec la calculatrice, on utilise la touche \(y^{x}\) de la façon suivante : on tape \(n\) sur la calculatrice d'abord, puis on appuie sur la touche \(y^{x}\), puis on tape \(p\) sur la calculatrice et enfin, on appuie sur la touche \(=\) et le résultat s’affiche.
