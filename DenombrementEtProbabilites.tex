@@ -85,8 +85,8 @@ Considérons $E = \left\lbrace d; i; a ; l ; o\right\rbrace $ alors
 
 \begin{itemize}
 \item[•] \textcolor{teal}{$(d,i); (a,l) ; (l,o) ;\cdots$sont des 2-listes d’éléments de $E$.}
-\item[•] \textcolor{teal}{$ffa ; fal ;aaa\cdots$ sont des 3-listes d’éléments de $E$.}
-\item[•] \textcolor{teal}{$faal ; llff\cdots$ sont des 4-listes d’éléments de E.}
+\item[•] \textcolor{teal}{$(d,d,i) ; (d,i,a) ;(a,a,a)\cdots$ sont des 3-listes d’éléments de $E$.}
+\item[•] \textcolor{teal}{$(d,a,a,l) ; (l,l,d,d)\cdots$ sont des 4-listes d’éléments de E.}
 \end{itemize}
 \subsection*{\underline{\textbf{\textcolor{red}{ii. Propriété}}}}
 Soit \(E\) un ensemble de cardinal \(n\) et \(p\) un entier \(\geq 1\). Le nombre de p-listes d’éléments de \(E\) est \(n^{p}\).
@@ -107,10 +107,10 @@ Considérons une urne qui contient \(n\) éléments et soit \(p\) un entier tel 
 \subsection*{\underline{\textbf{\textcolor{red}{i. Définition et exemple}}}}
 Soit \( E \) un ensemble de cardinal \( n \) et \( p \) un entier naturel tel que \( 1 \leq p \leq n \). Un \textbf{arrangement} de \( p \) éléments de \( E \) est une liste (suite ordonnée) de \( p \) éléments distincts de \( E \).
 
-\textbf{Par exemple}, si \( E = \{f, a, l\} \), alors:
+\textbf{Par exemple}, si \( E = \{d, i, a, l, o\} \), alors:
 \begin{itemize}
-    \item \( fa, af, lf, \ldots \) sont des arrangements de 2 éléments de \( E \).
-    \item \( fal, lfa, \ldots \) sont des arrangements de 3 éléments de \( E \).
+    \item \( (d, i), (i, d), (o, d), \ldots \) sont des arrangements de 2 éléments de \( E \).
+    \item \( (d, i, a), (o, d, i), \ldots \) sont des arrangements de 3 éléments de \( E \).
 \end{itemize}
 
 \textbf{Oralement :} Comme \( E \) contient 3 éléments, il n’existe pas d’arrangements de plus de 3 éléments de \( E \).
@@ -121,10 +121,10 @@ A_n^p = n \times (n-1) \times \cdots \times (n-p+1)
 \]
 
 \textbf{Exemple:}
-Soit \( E = \{f, a, l\} \) alors:
+Soit \( E = \{d, i, a, l, o\} \) alors:
 \begin{itemize}
-    \item[•] Le nombre d'arrangements de 2 éléments de \( E \) est noté \( A_3^2 \) et est égal à \( A_3^2 = 3 \times 2 = 6 \).
-    \item[•] Le nombre d'arrangements de 3 éléments de \( E \) est \( A_3^3 = 3 \times 2 \times 1 = 6 \).
+    \item[•] Le nombre d'arrangements de 2 éléments de \( E \) est noté \( A_5^2 \) et est égal à \( A_5^2 =^5\times 4 = 6 \).
+    \item[•] Le nombre d'arrangements de 3 éléments de \( E \) est \( A_5^3 = 5 \times 4 \times 3 = 6 \).
 \end{itemize}
 
 \textbf{Calcul sur la calculatrice:}
@@ -134,23 +134,24 @@ Le nombre de tirages successifs sans remise de p éléments dans une urne conten
 éléments est $A_{n}^{p}$
 \subsection*{\underline{\textbf{\textcolor{red}{c. Combinaison}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{i. Définition et exemple }}}}
-Soit $E$ un ensemble de cardinal $n$ et $p$ un entier naturel tel que $0 \leq p \leq n$. Une combinaison de 
-$p$ éléments de $E$ est une partie de $E$ contenant $p$ éléments.
+Soit $E$ un ensemble de cardinal $n$ et $p$ un entier naturel tel que\\ $0 \leq p \leq n$.
 
-Par exemple si $E = \{f, a, l\}$ alors
+Une combinaison de  $p$ éléments de $E$ est une partie de $E$ contenant $p$ éléments.
 
-$\{f\}$, $\{a\}$ et $\{l\}$ sont les combinaisons d'un élément de $E$.
+Par exemple si $E = \{d, i, a, l, o\}$ alors
 
-$\{f, a\}$, $\{f, l\}$ et $\{a, l\}$ sont les combinaisons de 2 éléments de $E$.
+$\{d\}$, $\{i\}$ et $\{a\}$ sont les combinaisons d'un élément de $E$.
 
-$E = \{f, a, l\}$ est la seule combinaison de 3 éléments de $E$.
+$\{d, i\}$, $\{d, a\}$ et $\{d, l\}$ sont les combinaisons de 2 éléments de $E$.
+
+$E = \{d, i, a, l, o\}$ est la seule combinaison de 5 éléments de $E$.
 \subsection*{\underline{\textbf{\textcolor{red}{ii. Propriété }}}}
-Le nombre de combinaisons de $p$ éléments pris parmi $n$ éléments d'un ensemble, noté $C_{n}^{p}$ (on lit $C_{n}^{p}$) est $C_{n}^{p} = \frac{A_{n}^{p}}{1 \times 2 \times 3 \times \cdots \times p}$.
+Le nombre de combinaisons de $p$ éléments pris parmi $n$ éléments d'un ensemble, noté $C_{n}^{p}$ (on lit $C_{n}^{p}$) est $C_{n}^{p} = \frac{A_{n}^{p}}{1 \times 2 \times 3 \times \cdots \times p}=\frac{n!}{(n-p)!p!}$.
 
-Par exemple, si $E = \{f, a, l\}$ alors :
+Par exemple, si $E = \{d, i, a, l, o\}$ alors :
 \begin{itemize}
-  \item[•] Le nombre de combinaisons de 2 éléments de $E$ est $C_{3}^{2} = \frac{A_{3}^{2}}{1 \times 2} = 3$.
-  \item[•] Le nombre de combinaisons de 3 éléments de $E$ est $C_{3}^{3} = \frac{A_{3}^{3}}{1 \times 2 \times 3} = 1$.
+  \item[•] Le nombre de combinaisons de 2 éléments de $E$ est $C_{5}^{2} = \frac{5!}{(5-2)!2!} = $.
+  \item[•] Le nombre de combinaisons de 3 éléments de $E$ est $C_{5}^{3} = \frac{5!}{(5-3)!3!} = $.
 \end{itemize}
 Pour calculer $C_{n}^{p}$ avec la calculatrice, on utilise la touche « n cr ».
 \subsection*{\underline{\textbf{\textcolor{red}{iii. Tirages simultanés}}}}
@@ -186,7 +187,7 @@ Un lycée a choisi ses 15 délégués de classe : 7 garçons et 8 filles.
     
     \item[d.] Déterminer le nombre de gouvernements comprenant exactement un garçon. \\
 \end{enumerate}
-\section*{\underline{\textbf{\textcolor{red}II. Probabilité}}}
+\section*{\underline{\textbf{\textcolor{red}{II. Probabilité}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{1. Expérience aléatoire et univers}}}}
 \begin{enumerate}
 \item[•]On dit qu’une expérience est aléatoire si on ne peut pas prédire avec certitude son résultat mais on peut décrire l’ensemble de tous ses résultats possibles. Une expérience aléatoire est dite épreuve.
@@ -204,8 +205,9 @@ l’épreuve ci-dessus $1 ; 2 ; 6\cdots $ sont des éventualités.
 \item[c.] \textbf{ Événement d’une épreuve}
 
 Dans une épreuve d’univers $\Omega$, on appelle évènement, toute partie de $\Omega$ c’est-à-dire tout ensemble d’éventualités. Par exemple dans l’épreuve ci-dessus d’univers
-$\Omega= \lbrace1; 2; 3; 4; 5; 6\rbrace $ , $\lll$ obtenir un chiffre 
-pair $\ggg$ $= \lbrace2; 4; 6\rbrace $ est un événement que l’on peut noter A, on a alors 
+$\Omega= \lbrace1; 2; 3; 4; 5; 6\rbrace $ ,
+
+$<<$ obtenir un chiffre pair $>>$ $= \lbrace2; 4; 6\rbrace $ est un événement que l’on peut noter A, on a alors 
 $A = \lbrace 2; 4; 6\rbrace$
 
 \item[d.] \textbf{Remarque}
@@ -216,7 +218,7 @@ Dans une épreuve :
 \item[•] un événement contenant une seule éventualité est appelé évènement élémentaire. Par exemple, 
 les événements $\lbrace 1\rbrace$ ;$\lbrace 5\rbrace$ et $\lbrace 4\rbrace$ sont des événements élémentaires de l’épreuve ci-dessus.
 \end{enumerate}
-\subsection*{\underline{\textbf{\textcolor{red}{2.  Évènement$ \lll A et B \ggg $; événement$ \lll A ou B \ggg $}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{2.  Évènement$  A et B \ggg $; événement$ \lll A ou B \ggg $}}}}
 Soient A et B deux événements dans une épreuve.
 \begin{itemize}
 \item[•] L’événement $A \cap B$ est dit événement $\lll$ A et B $\ggg$ 
@@ -268,8 +270,4 @@ A «  Elles appartiennent à la même paire ».
 B «  Le joueur ne peut pas jouer avec ce tirage »
 
 C «  il y a un pied droit et un pied gauche ».
-
-fryuhijedzokpurfiojeiurfedkirkjguhjk
-
-defryuhjkjhuiuy
 \end{document}
