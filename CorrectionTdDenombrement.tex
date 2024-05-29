@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{Kadidiatou Diallo}
+\title{\textbf{Correction}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section*{\underline{\textbf{\textcolor{red}{Exercice 6}}}} 
+
+Parmi $40$ secrétaires : 
+
+\begin{itemize}
+    \item $8$ parlent russe,
+    \item $15$ parlent anglais,
+    \item $8$ parlent espagnol,
+    \item $4$ parlent anglais et espagnol,
+    \item $5$ parlent anglais et russe,
+    \item $2$ parlent espagnol et russe,
+    \item $2$ parlent les trois langues.
+\end{itemize}
+
+\begin{enumerate}
+    \item[a.] Combien de secrétaires parlent au moins une des trois langues ?
+    
+    \item[b.] Combien de secrétaires ne connaissent aucune des trois langues ?
+    
+    \item Faire un diagramme.
+\end{enumerate}
+
+\subsection*{Solution}
+On commence par traduire les données de l'énoncé en définissant :
+
+l'ensemble  de toutes les secrétaires, donc  card(E)=40.
+
+l'ensemble  de celles qui parlent russe, donc  card(R)=8.
+
+l'ensemble  de celles qui parlent anglais, donc  card(A)=15.
+
+l'ensemble  de celles qui parlent allemand, donc card(E)=8. 
+
+De plus: card($A\cap E$)=4, card($A\cap R$)=5, card($E\cap R$)=2 et\\ card($A\cap E\cap R$)=2.
+
+L'ensemble des secrétaires qui ne connaissent aucune de ces trois langues est $\overline{A}\cap \overline{E}\cap \overline{R}$ = $\overline{A\cup E\cup R}$.
+
+Donc : card($\overline{A}\cap \overline{E}\cap \overline{R}$)=card(E)-card($A\cup E\cup R$)=40-card($A\cup E\cup R$)
+
+D'après la formule du crible,\\
+card($A\cup D\cup R$)=card(A)+card(E)+card(R)-card($A\cap E$)-card($A\cap R$)-card($E\cap R$)+card($A\cap E\cap R$).
+
+Donc: card($A\cup E\cup R$)=15+8+8-4-5-2+2=22
+
+Donc: card($\overline{A}\cap \overline{E}\cap \overline{R}$)=40-22=18
+
+Conclusion : Il y a 18 secrétaires qui ne connaissent aucune des trois langues.
+
+\subsection*{Diagramme de Venn}
+
+\begin{center}
+\begin{tikzpicture}
+    \def\firstcircle{(0,0) circle (1.5)}
+    \def\secondcircle{(1.5,0) circle (1.5)}
+    \def\thirdcircle{(0.75,-1.5) circle (1.5)}
+    \begin{scope}
+        \clip \firstcircle;
+        \fill[red!50] \secondcircle;
+    \end{scope}
+    \begin{scope}
+        \clip \firstcircle;
+        \fill[green!50] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+        \clip \secondcircle;
+        \fill[blue!50] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node[below left] {$R$};
+    \draw \secondcircle node[below right] {$A$};
+    \draw \thirdcircle node[above] {$E$};
+    \node at (0.75,0) {2};
+    \node at (-0.5,0) {1};
+    \node at (2.0,0) {3};
+    \node at (0.75,-2.5) {0};
+    \node at (1.25,-1) {4};
+    \node at (-0.25,-1) {5};
+    \node at (0.75,-0.5) {2};
+    \node at (3,1) {18};
+\end{tikzpicture}
+\end{center}
+\end{document}
