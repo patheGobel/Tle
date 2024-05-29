@@ -36,6 +36,16 @@
 
 Parmi $40$ secrétaires : 
 
+Soit:
+
+S l'ensemble  de toutes les secrétaires,
+
+R l'ensemble  de celles qui parlent russe, 
+
+A l'ensemble  de celles qui parlent anglais,
+
+E l'ensemble  de celles qui parlent allemand,
+
 \begin{itemize}
     \item $8$ parlent russe,
     \item $15$ parlent anglais,
@@ -55,9 +65,9 @@ Parmi $40$ secrétaires :
 \end{enumerate}
 
 \subsection*{Solution}
-On commence par traduire les données de l'énoncé en définissant :
-
-l'ensemble  de toutes les secrétaires, donc  card(E)=40.
+On commence par traduire les données de l'énoncé en définissant : 
+ 
+l'ensemble  de toutes les secrétaires, donc  card(S)=40.
 
 l'ensemble  de celles qui parlent russe, donc  card(R)=8.
 
@@ -82,11 +92,13 @@ Conclusion : Il y a 18 secrétaires qui ne connaissent aucune des trois langues.
 
 \subsection*{Diagramme de Venn}
 
-\begin{center}
 \begin{tikzpicture}
-    \def\firstcircle{(0,0) circle (1.5)}
-    \def\secondcircle{(1.5,0) circle (1.5)}
-    \def\thirdcircle{(0.75,-1.5) circle (1.5)}
+    % Define sets
+    \def\firstcircle{(0,0) circle (2.5)}
+    \def\secondcircle{(2.5,0) circle (2.5)}
+    \def\thirdcircle{(1.25,-2.5) circle (2.5)}
+    
+    % Fill intersections
     \begin{scope}
         \clip \firstcircle;
         \fill[red!50] \secondcircle;
@@ -99,17 +111,25 @@ Conclusion : Il y a 18 secrétaires qui ne connaissent aucune des trois langues.
         \clip \secondcircle;
         \fill[blue!50] \thirdcircle;
     \end{scope}
-    \draw \firstcircle node[below left] {$R$};
-    \draw \secondcircle node[below right] {$A$};
-    \draw \thirdcircle node[above] {$E$};
-    \node at (0.75,0) {2};
-    \node at (-0.5,0) {1};
-    \node at (2.0,0) {3};
-    \node at (0.75,-2.5) {0};
-    \node at (1.25,-1) {4};
-    \node at (-0.25,-1) {5};
-    \node at (0.75,-0.5) {2};
-    \node at (3,1) {18};
+    
+    % Draw sets
+    \draw \firstcircle;
+    \draw \secondcircle;
+    \draw \thirdcircle;
+    
+    % Place the labels independently
+    \node at (-2, 2.5) {$R$}; % Position adjusted for clarity
+    \node at (4.5, 2.5) {$A$}; % Position adjusted for clarity
+    \node at (1.25, -5.5) {$E$}; % Position adjusted for clarity
+    
+    % Example of placing numbers (optional)
+    \node at (1.25,0.5) {3};
+    \node at (-0.5,0.5) {3};
+    \node at (3,0.5) {8};
+    \node at (1.25,-3) {4};
+    \node at (2.5,-1.5) {2};
+    \node at (0,-1.5) {0};
+    \node at (1.25,-1) {2};
+    \node at (6,-1) {18};
 \end{tikzpicture}
-\end{center}
 \end{document}
