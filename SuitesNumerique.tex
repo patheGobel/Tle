@@ -34,23 +34,30 @@
 
 \section*{\underline{\textbf{\textcolor{red}{I. Notion de suite}}}} 
 \subsection*{\underline{\textbf{\textcolor{red}{1. Activité}}}} 
-On considère les nombrés réels suivants : -10,1; 5; 3,4 et - 8
+On considère les nombrés réels suivants : -10 ; 5 ; 3 ; 4 et - 8
 
-1. Ranger cette liste de 4 nombres dans l’ordre décroissant.
+1. Ranger cette liste de 5 nombres dans l’ordre décroissant.
 
 2. En considérant que le plus grand nombre occupe le rang 0 et en prenant l’ordre décroissant, donner les
 rangs des autres nombres.
 
 \underline{\textbf{\textcolor{red}{1.Solution}}}
 \begin{itemize}
-\item[1.]Le rangement dans l’ordre décroissant de cette liste de 4 nombres est : 5 ; 3,4 ; -8 ; -10,1.
+\item[1.]Le rangement dans l’ordre décroissant de cette liste de 4 nombres est : 5 ; 3 ; 4 ; -8 ; -10.
 
-\item[2.] 15,75 ; 15,25 ; 15 ; 14,75
+\item[2.] le rang de 5 est:$\cdots$ ; le rang de 3 est:$\cdots$ ; le rang de 4 est:$\cdots$ ; le rang de -8 est: $\cdots$ ; le rang de -10 est:$\cdots$
 \end{itemize}
 \underline{\textbf{\textcolor{red}{Exploitation de l'activité}}}
 
-La liste ordonnée suivant l’ordre décroissant des nombres suivants: 5; 3,4; -8; -10,1 est un exemple de suite de
-nombres réels. Cette suite peut être appelée u. Ainsi on peut écrire u : 5; 3,4; -8; -10,1 . Chaque élément de cette suite est dit terme de la suite u et peut être repéré par son rang. Ainsi, -8 est un terme de la suite u. Pour noter un terme d’une suite, on écrit le nom de la suite et on met en indice son rang, ainsi pour la suite u ci-dessus, on a : $u_{0}=5$ ; $u_{1}=3,4$ ; $u_{2}=-8$ et $u_{3}=-10,1$
+La liste ordonnée suivant l’ordre décroissant des nombres suivants:
+
+5 ; 3 ; 4 ; -8 ; -10 est un exemple de suite de nombres réels.
+
+Cette suite peut être appelée u. Ainsi on peut écrire u : 5 ; 3 ; 4 ; -8 ; -10 . 
+
+Chaque élément de cette suite est dit terme de la suite u et peut être repéré par son rang. 
+
+Ainsi, -8 est un terme de la suite u. Pour noter un terme d’une suite, on écrit le nom de la suite et on met en indice son rang, ainsi pour la suite u ci-dessus, on a : $u_{0}=5$ ; $u_{1}=3$ ; $u_{2}=4$ ; $u_{3}=-8 $ et $u_{3}=-10 $ 
 \section*{\underline{\textbf{\textcolor{red}{2. Définition, vocabulaire et notation}}}}
 Une suite numérique est une liste ordonnée de nombres réels. Chaque élément d’une suite est appelé terme
 et peut être repéré dans la liste par son rang. Pour une suite numérique u, le terme de rang n noté un (n étant
@@ -159,14 +166,22 @@ Montrer que la suite $(u_{n})_{n\in\mathbb{N}}$ telle que $u_{n} = -4n + 3$ est 
 préciser sa raison.
 \subsection*{\underline{\textbf{\textcolor{red}{2. Expression du terme général d’une suite arithmétique}}}}
 \subsection*{\underline{\textbf{\textcolor{red}{a. Propriété 1}}}}
-Si $(u_{n})_{n\in\mathbb{N}}$ est une suite arithmétique de raison r et de premier terme $u_{0}$ alors le terme général $u_{n}$ est égal à $u_{n} = u_{0} + r × n.$
+Si $(u_{n})_{n\in\mathbb{N}}$ est une suite arithmétique de raison r et de premier terme $u_{0}$ alors le terme général $u_{n}$ est égal à $u_{n} = u_{0} + nr.$
+
+Si le premier terme est $u_{1}$ alors le terme général $u_{n}$ est égal à \\$u_{n} = u_{1} + (n-1)r.$
+
+Si le premier terme est $u_{1}$ alors le terme général $u_{n}$ est égal à \\$u_{n} = u_{p} + (n-p)r.$
 
 \underline{\textbf{\textcolor{red}{Exemple}}}
 
 Donnons l’expression du terme général $u_{n}$ d’une suite arithmétique $(u_{n})_{n\in\mathbb{N}}$ de premier terme $u_{0} = 2$ et de raison 4.
 
 \subsection*{\underline{\textbf{\textcolor{red}{b. Propriété 2}}}}
-Si $(u_{n})_{n\in\mathbb{N}}$ est une suite arithmétique de raison r et si $u_{k}$ est un terme quelconque donné alors $u_{n} = u_{k} +r × (n - k)$.
+Si $(u_{n})_{n\in\mathbb{N}}$ est une suite arithmétique de raison r et si $u_{p}$ est un terme quelconque donné alors $u_{n} = u_{p} +(n - p)r$.
+
+La forme générale d'une expression d'une suite arithmétique est :  
+
+\[\textcolor{red}{\boxed{u_{n} = u_{p} + (n-p)r} \text{ A retenir}}\]
 
 \underline{\textbf{\textcolor{red}{Exemple}}}
 
@@ -176,9 +191,17 @@ Donnons l’expression du terme général un d’une suite arithmétique $(u_{n}
 Nombre de termes d’une somme de termes consécutifs= (indice du $1^{er}$ terme de la somme-indice du dernier
 terme) +1. Par exemple, le nombre de termes de la somme $S = u_{0} + u_{1} + u_{2} +\cdots+u_{p}$ est $p+1$
 \subsection*{\underline{\textbf{\textcolor{red}{b. Somme de termes consécutifs d’une suite arithmétique}}}}
-La somme de termes consécutifs d’une suite arithmétique est donnée par :
+La somme de termes consécutifs d’une suite géométrique de raison q est donnée par :
 
-\textbf{nombre de termes de la somme} $ \times \frac{1^{er}\text{ terme+dernier terme}}{2} $
+$u_{0}+u_{1}+u_{2}+u_{3}+u_{4}+\cdots+u_{n}=\left[\frac{(n+1)(u_{0}+u_{n})}{2} \right] $
+
+Si le premier terme  est $u_{p}$:
+
+$u_{p}+u_{p+1}+u_{p+2}+u_{p+3}+u_{p+4}+\cdots+u_{n}=\left[\frac{(n-p+1)(u_{p}+u_{n})}{2} \right]$
+
+La somme des termes d'une suite étant notée $S_{n}$, on a:
+
+\[\textcolor{red}{\boxed{S_{n}=\left[\frac{(n-p+1)(u_{p}+u_{n})}{2} \right]}\text{ A retenir !!}}\]
 
 \underline{\textbf{\textcolor{red}{Exemple}}}
 
@@ -205,6 +228,10 @@ $u_{0} = 3$ et de raison 2.
 \subsection*{\underline{\textbf{\textcolor{red}{b. Propriété 2}}}}
 Si $(u_{n})_{n\in\mathbb{N}}$ est une suite arithmétique de raison q et si $u_{p}$ est un terme quelconque donné alors $u_{n} = u_{p} × q^{n-p}$ .
 
+La forme générale d'une expression d'une suite géométrique est :  
+
+\[\textcolor{red}{\boxed{u_{n} = u_{p} × q^{n-p}} \text{ A retenir}}\]
+
 \underline{\textbf{\textcolor{red}{Exemple}}}
 
 Donnons l’expression du terme général $u_{n}$ d’une suite géométrique $(u_{n})_{n\in\mathbb{N}}$ de raison 5 et tel que $u_{1} = 2$
@@ -216,6 +243,10 @@ $u_{0}+u_{1}+u_{2}+u_{3}+u_{4}+\cdots+u_{n}=\frac{1-q^{n+1}}{1-q}$
 Si le premier terme  est $u_{p}$:
 
 $u_{p}+u_{p+1}+u_{p+2}+u_{p+3}+u_{p+4}+\cdots+u_{n}=u_{p}\frac{1-q^{n-p+1}}{1-q}$
+
+La somme des termes d'une suite étant notée $S_{n}$, on a:
+
+\[\textcolor{red}{\boxed{S_{n}=u_{p}\frac{1-q^{n-p+1}}{1-q}}\text{ A retenir !!}}\]
 
 \underline{\textbf{\textcolor{red}{Exemple}}}
 
