@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{Destinés à la TLe\\Au Lycée de Dindéferlo}
+\title{\textbf{TD Sur les Suites}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{I. Primitive d’une fonction}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Définition}}}}
+Soit $f$ et $F$ deux fonctions définies sur un intervalle $I$. On dit que $F$ est une primitive de $f$ sur $I$ si la dérivée de $F$ est égale à $f$ c’est-à-dire si $F'(x) = f(x)$.
+\subsection*{\underline{\textbf{\textcolor{red}{2. Exemple}}}}
+\begin{itemize}
+\item[a.] $f(x) = 2x$ et $F(x) = x^{2}$ . Montrons que $F$ est une primitive de $f$ sur. Pour ce, on calcule $F'(x)$. On sait que $F'(x) = 2x = f(x)$ donc $F$ est une primitive de $f$ sur $\mathbb{R}$
+\item[b.] $f(x) = x^{5}$ et $F(x) = \frac{1}{6}x^{6}$ . Montrons que F est une primitive de f sur $\mathbb{R}$ . Pour ce, on calcule $F'(x)$. On sait 1 que $F'(x) =\frac{1}{6}(6x^{5})= f(x)$ donc F est une primitive de f sur $\mathbb{R}$.
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{3. Primitives de fonctions usuelles}}}}
+Le tableau suivant donne une primitive de certaines fonctions usuelles : a est un réel constant
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Fonctions usuelles f & Une primitive F de f &  Sur l’intervalle I   \\
+\hline
+$f(x) = 0$& $F(x)=0$& $\mathbb{R}$  \\
+\hline
+$f(x) = a$& $F(x) = ax$  &  $\mathbb{R}$\\
+\hline
+$f(x) = ax$& $F(x) = \frac{ax^{2}}{2}$& $\mathbb{R}$  \\
+\hline
+$f(x) = ax^{n}$& $F(x) = \frac{ax^{n+1}}{n+1}$ & $\mathbb{R}$ \\
+\hline
+$f(x) = \frac{a}{x^{2}}$& $F(x) = -\frac{a}{x}$ & $\mathbb{R}^{*}$ \\
+\hline
+$f(x) = \frac{a}{x}$& $F(x) = a\ln x$ & $\mathbb{R}^{*}_{+}$ \\
+\hline
+$f(x) = e^{ax}$& $F(x) = \frac{e^{ax}}{a}$ & $\mathbb{R}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{\underline{\textbf{\textcolor{red}{II. Intégrale d’une fonction}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Définition}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{2. Exemple}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{3. Exercice d’application (Bac 2018)}}}}
+\end{document}
